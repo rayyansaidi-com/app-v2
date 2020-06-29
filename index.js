@@ -1,9 +1,9 @@
-const {app, BrowserWindow, Menu} = require('electron');
+const { app, BrowserWindow, Menu } = require('electron');
 const shell = require('electron').shell;
 const electron = require('electron');
 const path = require('path');
 
-function createWindow () {
+function createWindow() {
   // Create the browser window.
   const win = new BrowserWindow({
     width: 800,
@@ -15,19 +15,19 @@ function createWindow () {
   win.loadFile('src/index.html')
   var menu = Menu.buildFromTemplate([
     {
-    label: 'rayyansaidi.com',
-    submenu: [
-      {
-        label: 'Quit',
-        accelerator: 'CmdOrCtrl+Q',
-        click() {
-          app.quit()
+      label: 'rayyansaidi.com',
+      submenu: [
+        {
+          label: 'Quit',
+          accelerator: 'CmdOrCtrl+Q',
+          click() {
+            app.quit()
+          }
         }
-      }
-    ]
-  }
-])
-Menu.setApplicationMenu(menu);
+      ]
+    }
+  ])
+  Menu.setApplicationMenu(menu);
   // and load the index.html of the app.
   // Open the DevTools.
   win.webContents.openDevTools()
