@@ -207,3 +207,9 @@ h1 {
 #holiday .card {
     height: calc(100vh - 3rem);
 }
+
+input {
+    background-color: #303030;
+    border: 0;
+    color: #fff;
+}
