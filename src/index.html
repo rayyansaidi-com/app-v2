@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rayyansaidi.com</title>
+    <link href="fonts/fonts.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="sidebar card card-body">
+        <a href="#top" style="color: white;" onclick="Rayyansaidi()">
+            <h1>Home</h1>
+        </a>
+        <div id="home-url">
+            <a href="#interduction">Introduction</a><br><br>
+            <a href="#favroite">Favroite things to do outside school</a><br><br>
+            <a href="#img">Pictures of family members</a><br><br>
+            <a href="#family">Family details</a>
+        </div>
+        <h1>Games</h1>
+        <a href="#treasure" onclick="Treasure()">Treasure Hunt</a>
+        <div class="holiday">
+
+        </div>
+        <a href="#holidays" style="color: gold;" onclick="holiday()">
+            <h2>Holiday Templates</h2>
+        </a>
+        <div id="holidays">
+            <a href="#birthday" onclick="Birthday()">Birthday</a><br><br>
+            <a onclick="Father()" href="#father">Father's day</a><br><br>
+            <a onclick="Mom()" href="#mom">Mother's Day</a><br><br>
+            <a onclick="Val()" href="#val">Valentine's Day</a>
+        </div>
+    </div>
+    <div class="main" id="top container-fluid">
+        <div id="rayyansaidi">
+            <div class="card card-body" id="interduction">
+                <h1>Introduction</h1>
+                <p>To start of, my name is Rayyan saidi. I am a small 10 year old boy that lives in PA. Below is a
+                    picture of me.</p>
+                <img style="width: 300px;" src="Images/Rayyan.jpg">
+                <p>I am going into 6th grade and I'm going to Dorseyville Middle School in August.</p>
+                <p>I have great parents named Rakie Cham and Wissam Saidi, a grandma name Salame Cham, and a wonderfull
+                    sister named Salam Saidi. I spent the begining of 2020 in a dangorous pandemic that was one of the
+                    worst ones in history. That time was difficult because everything was closed and families where
+                    struggling to get food and water. Luckily, my family was able to get the food and water we needed
+                    becacuse both of my parents had jobs.</p>
+            </div>
+            <div id="favroite" class="card card-body">
+                <h1>Favorite things to do outside of school</h1>
+                <ol>
+                    <li>Electronics</li>
+                    <li>Coding</li>
+                    <li>Resting and Reading</li>
+                    <li>Playing chess with my sister</li>
+                    <li>Meeting with friends</li>
+                </ol>
+            </div>
+            <div id="img" class="card card-body">
+                <h1>Pictures of family members, along with my favorite cousins in Florida</h1>
+                <img style="width: 400px;" src="Images/Rayyan.jpg">
+                <p>Rayyan Saidi</p>
+                <img style="width: 400px;" src="Images/Salam.jpg">
+                <p>Salam Saidi</p>
+                <img style="width: 400px;" src="Images/Wissam.jpg">
+                <p>Wissam Saidi</p>
+                <img style="width: 400px;" src="Images/Rakie.jpg">
+                <p>Rakie Cham</p>
+                <img style="width: 400px;" src="Images/Salame.jpg">
+                <p>Salame Cham</p>
+                <img style="width: 600px; @media (){
+                    
+                }" src="Images/Orlando.jpeg">
+                <p>Cousins in Orlando, Florida</p>
+                <img style="width: 600px;" src="Images/South.jpeg">
+                <p>Cousins in Boyton Beach, Florida</p>
+            </div>
+            <div id="family" class="card card-body">
+                <h1>Family Details</h1>
+                <h3>Rayyan Saidi</h3>
+                <ul>
+                    <li>10 years old</li>
+                    <li>Person who made this app and <a href="https://rayyansaidi.com">rayyansaidi.com</a></li>
+                    <li>Oldest kid in my house</li>
+                    <li>Going into 6th grade</li>
+                </ul>
+                <h3>My sister</h3>
+                <ul>
+                    <li>8 years old</li>
+                    <li>Creater of <a href="https://salamsaidi.com">salamsaidi.com</a></li>
+                    <li>Youngest kid of my house</li>
+                    <li>Going into 4th grade</li>
+                </ul>
+                <h3>My dad</h3>
+                <ul>
+                    <li>Principle of the <a href="http://saidigroup.pitt.edu">Saidi Reasearch Group</a></li>
+                    <li>Mine and Salam's father</li>
+                    <li>Works as a machanical Engener</li>
+                </ul>
+                <h3>My mom</h3>
+                <ul>
+                    <li>Part of the faculaty of <a
+                            href="https://www.engineering.pitt.edu/Sub-Sites/Labs/HMBL/Content/About-Us/">SSOE</a></li>
+                    <li>Mine and Salam's mother</li>
+                    <li>Works as a Bio Engener</li>
+                </ul>
+                <h3>Salame Cham</h3>
+                <ul>
+                    <li>A wonderfull cook</li>
+                    <li>Mine and Salam's Grandma</li>
+                    <li>Great Knitter</li>
+                    <li>Best Grandma ever</li>
+                </ul>
+            </div>
+        </div>
+        <div id="treasure">
+            <h1>Treasure Hunt</h1>
+            <p class="hi">Scroll down to see if your result is incorrect.</p>
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h1>How do I play?</h1><br>
+                    <p style="color: black;">To play, you pick one of the rooms where the treasure can be. The grid
+                        shows you the rooms and there location. Below are the colors of the rooms.</p>
+                    <p class="blue">The upstairs hall</p>
+                    <p class="red">The kitchen</p>
+                    <p class="green">The downstairs hall</p>
+                    <p class="purple">The monster room</p>
+                    <p class="yellow">The play room</p>
+                    <p style="color: black;">If you pick the correct one, you score a point. If you pick the incorrect
+                        one, bad luck. The game if over.</p>
+                </div>
+
+            </div>
+            <div class="hi">
+                <!-- Trigger/Open The Modal -->
+                <button id="myBtn" class="button">How do I play?</button>
+                <!--Play button-->
+                <br><br><button type="button" id="playbtn" class="button" onclick="play()">I want to play!!</button>
+                <br><br>
+
+                <!--Table-->
+                <div id="table">
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid purple;" class="grid-item"> </div>
+                    <div style="border: 5px solid purple;" class="grid-item"> </div>
+                    <div style="border: 5px solid purple;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid purple;" class="grid-item"> </div>
+                    <div style="border: 5px solid purple;" class="grid-item"> </div>
+                    <div style="border: 5px solid purple;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid purple;" class="grid-item"> </div>
+                    <div style="border: 5px solid purple;" class="grid-item"> </div>
+                    <div style="border: 5px solid purple;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid purple;" class="grid-item"> </div>
+                    <div style="border: 5px solid purple;" class="grid-item"> </div>
+                    <div style="border: 5px solid purple;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid purple;" class="grid-item"> </div>
+                    <div style="border: 5px solid purple;" class="grid-item"> </div>
+                    <div style="border: 5px solid purple;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid purple;" class="grid-item"> </div>
+                    <div style="border: 5px solid purple;" class="grid-item"> </div>
+                    <div style="border: 5px solid purple;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid purple;" class="grid-item"> </div>
+                    <div style="border: 5px solid purple;" class="grid-item"> </div>
+                    <div style="border: 5px solid purple;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid purple;" class="grid-item"> </div>
+                    <div style="border: 5px solid purple;" class="grid-item"> </div>
+                    <div style="border: 5px solid purple;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid purple;" class="grid-item"> </div>
+                    <div style="border: 5px solid purple;" class="grid-item"> </div>
+                    <div style="border: 5px solid purple;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid purple;" class="grid-item"> </div>
+                    <div style="border: 5px solid purple;" class="grid-item"> </div>
+                    <div style="border: 5px solid purple;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid purple;" class="grid-item"> </div>
+                    <div style="border: 5px solid purple;" class="grid-item"> </div>
+                    <div style="border: 5px solid purple;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid blue;" class="grid-item"> </div>
+                    <div style="border: 5px solid purple;" class="grid-item"> </div>
+                    <div style="border: 5px solid purple;" class="grid-item"> </div>
+                    <div style="border: 5px solid purple;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid gold;" class="grid-item"> </div>
+                    <div style="border: 5px solid gold;" class="grid-item"> </div>
+                    <div style="border: 5px solid gold;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid gold;" class="grid-item"> </div>
+                    <div style="border: 5px solid gold;" class="grid-item"> </div>
+                    <div style="border: 5px solid gold;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid gold;" class="grid-item"> </div>
+                    <div style="border: 5px solid gold;" class="grid-item"> </div>
+                    <div style="border: 5px solid gold;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid gold;" class="grid-item"> </div>
+                    <div style="border: 5px solid gold;" class="grid-item"> </div>
+                    <div style="border: 5px solid gold;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid gold;" class="grid-item"> </div>
+                    <div style="border: 5px solid gold;" class="grid-item"> </div>
+                    <div style="border: 5px solid gold;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid gold;" class="grid-item"> </div>
+                    <div style="border: 5px solid gold;" class="grid-item"> </div>
+                    <div style="border: 5px solid gold;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid green;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                    <div style="border: 5px solid red;" class="grid-item"> </div>
+                </div><br><br>
+                <div class="play" id="play">
+                    <p class="blue">The upstairs hall</p>
+                    <p class="red">The kitchen</p>
+                    <p class="green">The downstairs hall</p>
+                    <p class="purple">The monster room</p>
+                    <p class="yellow">The play room</p>
+                    <button type="button" onclick="Uhall()">The Upstairs Hall</button>
+                    <button type="button" onclick="Kitchen()">The Kitchen</button>
+                    <button type="button" onclick="Dhall()">The Downstairs Hall</button>
+                    <button type="button" onclick="Monster()">The Monster Room</button>
+                    <button type="button" onclick="Play()">The Play Room</button>
+                    <h1>Scorebord</h1>
+                    <p id="scorebord">0</p>
+                    <p>Points</p>
+                    <p id="lose"></p>
+                    <button type="button" onclick="restart()">Restart</button>
+                    <button type="button" onclick="none()">Hide playing stuff</button>
+                </div>
+            </div>
+        </div>
+        <div id="holiday">
+            <div id="holiday-home" class="card card-body">
+                <h1>Holiday Templates</h1>
+                <p>Do you need a birthday card, but can't buy one from the store? Well, if yes, you have come to the
+                    right place. Follow the instructions below to make your perfect birthday card!</p>
+                <ol>
+                    <li>Click one of the links to your left</li>
+                    <li>Fill in the blanks with whatever you want. Examples are on the templates</li>
+                    <li>Take a screen shot of your final prodect. <a href="https://support.apple.com/en-us/HT201361">On
+                            a mac, follow the instructions on this link to see how. Take a partial screen shot.</a> <a
+                            href="https://support.microsoft.com/en-us/help/13776/windows-10-use-snipping-tool-to-capture-screenshots">On
+                            a windows, follow the instructions shown in the link to take a partial screenshot.</a></li>
+                    <li>Open the file, print it, and show it to whoever this is addressed to.</li>
+                </ol>
+            </div>
+            <div id="birthday" style="display: none;" class="card card-body">
+                <h1>Happy Birthday <input type="text" placeholder="name of person" value="Bob">!!!!</h1>
+                <p>We wish you a happy <input type="text" placeholder="age of person" value="11">th Birthday!</p>
+                <p>You have been a very helpfull person to us and I do not know how I could have gone without you.</p>
+            </div>
+            <div id="father" style="display: none;" class="card card-body">
+                <h1>Happy Father's Day <input type="text" value="Dad" placeholder="Whatever you call your dad">!</h1>
+                <p>We hope that you have the best father's day ever! Thank you for being the greatest <input type="text"
+                        value="Dad" placeholder="Whatever you call your dad">Ever!</p>
+            </div>
+            <div id="mom" style="display: none;" class="card card-body">
+                <h1>Happy Mother's Day <input typ="text" value="Mom" placeholder="Whatever you call your mom">!</h1>
+                <p>We hope that you have the best Mother's day ever! Thank you for being the greatest <input type="text"
+                        value="Mom" placeholder="Whatever you call your mom">Ever!</p>
+            </div>
+            <div id="val" style="display: none;" class="card card-body">
+                <h1>Happy Valentines's Day <input typ="text" value="Bob" placeholder="Who is this addressed to?">!</h1>
+                <p>We hope that you have the best Valentines's day ever! You play a very importent rule in my life and I
+                    do not know how I could live without you.</p>
+            </div>
+        </div>
+    </div>
+    <!--Scripts-->
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/function.js"></script>
+</body>
+
+</html>
