@@ -21,8 +21,10 @@ function Rayyansaidi() {
     x.style.display = 'block';
     y.style.display = 'none';
     z.style.display = 'block';
+    a.style.display = 'none';
     document.getElementById('table').style.display = 'none';
     document.getElementById('play').style.display = 'none';
+    b.style.display = 'none';
 }
 function Treasure() {
     x.style.display = 'none';
@@ -30,6 +32,8 @@ function Treasure() {
     z.style.display = 'none';
     p.style.display = 'block';
     p.style.margin = '0 auto';
+    a.style.display = 'none';
+    b.style.display = 'none';
 }
 // Holiday Templates
 function holiday() {
