@@ -33,6 +33,7 @@ function Treasure() {
 }
 // Holiday Templates
 function holiday() {
+    a.style.display = 'block'
     x.style.display = 'none';
     y.style.display = 'none';
     z.style.display = 'none';
