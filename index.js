@@ -30,7 +30,7 @@ function createWindow() {
   Menu.setApplicationMenu(menu);
   // and load the index.html of the app.
   // Open the DevTools.
-  win.webContents.openDevTools()
+  // win.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished
