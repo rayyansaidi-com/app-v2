@@ -1,15 +1,17 @@
 {
-  "name": "rayyansaidi Desktop",
-  "version": "1.0.0",
+  "name": "rayyansaidi-desktop",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "package": "./node_modules/electron-packager/bin/electron-packager.js ./"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^9.0.5"
+    "electron": "^8.3.4",
+    "electron-packager": "^15.0.0"
   }
 }
