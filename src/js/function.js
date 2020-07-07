@@ -50,18 +50,6 @@ function holiday() {
     b.style.display = 'block';
     document.getElementById('table').style.display = 'none';
     document.getElementById('play').style.display = 'none';
-    sBtn.style.display = 'block'
-    sBtn.addEventListener('click', () => {
-        document.getElementById('screenshot-output').setAttribute('disabled', 'disabled');
-        html2canvas(aa, { backgroundColor: "#222222" }).then(canvas => {
-            document.getElementById('canvas').appendChild(canvas);
-            var canvas = document.querySelector('#canvas canvas');
-            document.getElementById('screenshot').innerHTML = `<a href="` + document.querySelector('#canvas canvas').toDataURL() + `" target="blank">` + `<button class="btn btn-outline-success" id="screenshot-output" type="button">Open in new tab</button></a><button class="btn btn-primary" id="screenshot-button" type="button">Take a screenshot</button>`;
-            canvas.remove();
-            document.getElementById('screenshot-output').style.display = 'inline-block';
-            document.getElementById('screenshot-output').removeAttribute('disabled');
-        })
-    })
 }
 function Birthday() {
     aa.style.display = 'none';
