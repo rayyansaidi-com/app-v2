@@ -218,3 +218,16 @@ input {
     color: #fff;
     text-align: center;
 }
+#screenshot {
+    position: absolute;
+    bottom:20px;
+    left:20px;
+    display: none;
+    background-color: #303030;
+}
+#screenshot button {
+    margin: .5rem;
+}
+#screenshot #screenshot-output {
+    display: none;
+}
