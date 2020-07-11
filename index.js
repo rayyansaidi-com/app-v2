@@ -74,15 +74,6 @@ app.on('activate', () => {
     createWindow()
   }
 })
-var request = new XMLHttpRequest
-request.open("GET", "https://unpkg.com/rayyansaidi-desktop/package.json", true), request.onload = function () {
-    var e = JSON.parse(this.response).version;
-    if (app.getVersion() != JSON.parse(this.response).version) {
-      console.log('update :D')
-    } else {
-      console.log('no update D:')
-    }
-}
-request.send();
+
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
