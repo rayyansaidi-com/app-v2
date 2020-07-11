@@ -21,9 +21,11 @@ jobs:
     # Runs a single command using the runners shell
     - name: Setup
       run: |
+        sudo dpkg --add-architecture i386
+        wget -O - https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
+        sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
         sudo apt update
-        sudo apt -y upgrade
-        sudo apt -y install wine
+        sudo apt -y install --install-recommends winehq-stable
 
     # Runs a set of commands using the runners shell
     - name: Package
