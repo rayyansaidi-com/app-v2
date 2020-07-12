@@ -65,6 +65,7 @@ jobs:
           npm run build:darwin:dmg
           npm run build:darwin:pkg
       - name: upload
+        uses: actions/upload-artifact@v2
         with:
           name: dist 
           path: dist
