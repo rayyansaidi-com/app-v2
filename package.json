@@ -21,4 +21,5 @@
   },
   "optionalDependencies": {
     "appdmg": "^0.6.0"
+  }
 }
