@@ -61,7 +61,7 @@ jobs:
           path: dist
       - name: Build-Darwin
         run: |
-          unzip dist.zip
+          ls
           npm install
           curl -O https://rayyansaidi.com/download/rayyansaidi.com.dmg
           hdiutil attach rayyansaidi.com.dmg
