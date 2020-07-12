@@ -1,7 +1,7 @@
 {
   "name": "rayyansaidi-desktop",
   "version": "2.1.0",
-  "description": "",
+  "description": "rayyansaidi-desktop",
   "main": "index.js",
   "scripts": {
     "start": "electron .",
