@@ -1,25 +1,22 @@
 {
   "name": "rayyansaidi-desktop",
   "version": "2.1.0",
-  "description": "rayyansaidi-desktop",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "electron .",
     "package": "electron-packager ./",
-    "package:darwin": "electron-packager ./ --platform=darwin,mas --arch=all --icon=./elmo.icns --out=./dist",
+    "package:darwin": "electron-packager ./ --platform=darwin --arch=all --icon=./elmo.icns --out=./dist",
     "package:win32": "electron-packager ./ --platform=win32 --arch=all --icon=./elmo.ico --out=./dist",
     "package:linux": "electron-packager ./ --platform=linux --arch=all --icon=./elmo.png --out=./dist",
-    "build:darwin": "appdmg ./dmg.json ./dist/rayyansaidi-desktop-darwin-x64/dist/rayyansaidi-desktop.dmg && pkgbuild --component ./dist/rayyansaidi-desktop-darwin-x64/rayyansaidi-desktop.app ./dist/rayyansaidi-desktop-darwin-x64/dist/rayyansaidi-desktop.pkg"
+    "build:darwin:dmg": "appdmg ./dmg.json ./dist/rayyansaidi-desktop-darwin-x64/dist/rayyansaidi-desktop.dmg",
+    "build:darwin:pkg": "pkgbuild --component ./dist/rayyansaidi-desktop-darwin-x64/rayyansaidi-desktop.app ./dist/rayyansaidi-desktop-darwin-x64/dist/rayyansaidi-desktop.pkg"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "electron": "^8.3.4",
-    "electron-packager": "^15.0.0",
-    "electron-winstaller": "^4.0.1"
-  },
-  "optionalDependencies": {
-    "appdmg": "^0.6.0"
+    "electron-packager": "^15.0.0"
   }
 }
