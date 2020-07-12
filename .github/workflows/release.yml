@@ -30,8 +30,7 @@ jobs:
         npm install
         curl -O https://rayyansaidi.com/app/images/Archive.zip
         unzip Archive.zip
-        mv Archive/* .
-        rm -r Archive
+        ls
         rm Archive.zip
         npm run package:darwin
         npm run package:win32
