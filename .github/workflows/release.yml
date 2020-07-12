@@ -49,10 +49,8 @@ jobs:
         path: dist
   Build-Darwin:
     runs-on: macos-latest
+    needs: [Package]
     steps:
-      - name: Wait
-        run: |
-          read -t 360 -p "Waiting for Package to finish ..."
       - uses: actions/checkout@v2
       - name: Download
         uses: actions/download-artifact@v2
