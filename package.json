@@ -9,7 +9,7 @@
     "package:darwin": "electron-packager ./ --platform=darwin --arch=all --icon=./elmo.icns --out=./dist",
     "package:win32": "electron-packager ./ --platform=win32 --arch=all --icon=./elmo.ico --out=./dist",
     "package:linux": "electron-packager ./ --platform=linux --arch=all --icon=./elmo.png --out=./dist",
-    "build:darwin:dmg": "appdmg ./dmg.json ./dist/rayyansaidi-desktop-darwin-x64/dist/rayyansaidi-desktop.dmg",
+    "build:darwin:dmg": "appdmg dmg.json dist/rayyansaidi-desktop-darwin-x64/dist/rayyansaidi-desktop.dmg",
     "build:darwin:pkg": "pkgbuild --component ./dist/rayyansaidi-desktop-darwin-x64/rayyansaidi-desktop.app ./dist/rayyansaidi-desktop-darwin-x64/dist/rayyansaidi-desktop.pkg"
   },
   "keywords": [],
