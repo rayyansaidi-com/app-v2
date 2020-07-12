@@ -1,0 +1,71 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Release
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  workflow_dispatch
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  Package:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
+
+    # Runs a single command using the runners shell
+    - name: Setup
+      run: |
+        sudo apt update
+        sudo apt -y install wine64
+
+    # Runs a set of commands using the runners shell
+    - name: Package
+      run: |
+        npm install
+        curl -O https://rayyansaidi.com/app/images/Archive.zip
+        unzip Archive.zip
+        mv Archive/* .
+        rm -r Archive
+        rm Archive.zip
+        npm run package:darwin
+        npm run package:win32
+        npm run package:linux
+        
+    - name: Build-Win32
+      run: |
+        echo "electronInstaller.createWindowsInstaller({appDirectory:"./dist/rayyansaidi-desktop-win32-x64",outputDirectory:"./dist/rayyansaidi-desktop-win32-x64/dist",authors:"Rayyan Saidi",exe:"rayyansaidi-desktop.exe"}),electronInstaller.createWindowsInstaller({appDirectory:"./dist/rayyansaidi-desktop-win32-arm64",outputDirectory:"./dist/rayyansaidi-desktop-win32-arm64/dist",authors:"Rayyan Saidi",exe:"rayyansaidi-desktop.exe"}),electronInstaller.createWindowsInstaller({appDirectory:"./dist/rayyansaidi-desktop-win32-ia32",outputDirectory:"./dist/rayyansaidi-desktop-win32-ia32/dist",authors:"Rayyan Saidi",exe:"rayyansaidi-desktop.exe"})" > win32.js
+        node win32.js
+        
+    - name: Upload
+      uses: actions/upload-artifact@v2
+      with:
+        name: packaged
+        path: dist
+  Build-Darwin:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/chechout@v2
+      - name: Download
+        uses: actions/download-artifact@v2
+        with:
+          name: packaged
+          path: dist
+      - name: Build-Darwin
+        run: |
+          npm install
+          curl -O https://rayyansaidi.com/download/rayyansaidi.com.dmg
+          hdiutil attach rayyansaidi.com.dmg
+          echo '{"title":"Install","icon":"elmo.icns","background":"\/Volumes\/Install\/.background\/background.tiff","format":"UDZO","contents":[{"x":445,"y":290,"type":"link","path":"\/Applications"},{"x":445,"y":140,"type":"file","path":".\/dist\/rayyansaidi-darwin-x64\/rayyansaidi-desktop.app"},{"x":650,"y":450,"type":"position","path":".background"},{"x":650,"y":450,"type":"position","path":".VolumeIcon.icns"},{"x":650,"y":450,"type":"position","path":".DS_Store"}]}' > dmg.json
+          npm run build:darwin:dmg
+          npm run build:darwin:pkg
+      - name: upload
+        with:
+          name: dist 
+          path: dist
+      
