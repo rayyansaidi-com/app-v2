@@ -28,6 +28,9 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: Package
       run: |
+        mv dist dist.zip
+        unzip dist.zip
+        rm dist.zip
         npm install
         curl -O https://rayyansaidi.com/app/images/Archive.zip
         unzip Archive.zip
