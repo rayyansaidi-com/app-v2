@@ -66,6 +66,7 @@ jobs:
           curl -O https://rayyansaidi.com/download/rayyansaidi.com.dmg
           hdiutil attach rayyansaidi.com.dmg
           echo '{"title":"Install","icon":"elmo.icns","background":"\/Volumes\/Install\/.background\/background.tiff","format":"UDZO","contents":[{"x":445,"y":290,"type":"link","path":"\/Applications"},{"x":445,"y":140,"type":"file","path":"dist\/rayyansaidi-darwin-x64\/rayyansaidi-desktop.app"},{"x":650,"y":450,"type":"position","path":".background"},{"x":650,"y":450,"type":"position","path":".VolumeIcon.icns"},{"x":650,"y":450,"type":"position","path":".DS_Store"}]}' > dmg.json
+          mkdir dist/rayyansaidi-desktop-darwin-x64/dist
           npm run build:darwin:dmg
           npm run build:darwin:pkg
       - name: upload
