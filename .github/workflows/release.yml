@@ -21,8 +21,9 @@ jobs:
     # Runs a single command using the runners shell
     - name: Setup
       run: |
+        sudo dpkg --add-architecture i386 
         sudo apt update
-        sudo apt -y install wine64
+        sudo apt -y install wine64 wine32
 
     # Runs a set of commands using the runners shell
     - name: Package
@@ -31,6 +32,7 @@ jobs:
         curl -O https://rayyansaidi.com/app/images/Archive.zip
         unzip Archive.zip
         ls
+        rm _*MACOSX
         rm Archive.zip
         npm run package:darwin
         npm run package:win32
