@@ -42,12 +42,13 @@ jobs:
       run: |
         echo 'const electronInstaller = require("electron-winstaller");electronInstaller.createWindowsInstaller({appDirectory:"dist/rayyansaidi-desktop-win32-x64",outputDirectory:"dist/rayyansaidi-desktop-win32-x64/dist",authors:"Rayyan Saidi",exe:"rayyansaidi-desktop.exe"}),electronInstaller.createWindowsInstaller({appDirectory:"dist/rayyansaidi-desktop-win32-arm64",outputDirectory:"dist/rayyansaidi-desktop-win32-arm64/dist",authors:"Rayyan Saidi",exe:"rayyansaidi-desktop.exe"}),electronInstaller.createWindowsInstaller({appDirectory:"dist/rayyansaidi-desktop-win32-ia32",outputDirectory:"dist/rayyansaidi-desktop-win32-ia32/dist",authors:"Rayyan Saidi",exe:"rayyansaidi-desktop.exe"})' > win32.js
         node win32.js
+        zip -r dist dist
         
     - name: Upload
       uses: actions/upload-artifact@v2
       with:
         name: packaged
-        path: dist
+        path: dist.zip
   Build-Darwin:
     runs-on: macos-latest
     needs: [Package]
@@ -60,6 +61,7 @@ jobs:
           path: dist
       - name: Build-Darwin
         run: |
+          unzip dist.zip
           npm install
           curl -O https://rayyansaidi.com/download/rayyansaidi.com.dmg
           hdiutil attach rayyansaidi.com.dmg
