@@ -40,7 +40,7 @@ jobs:
     - name: Build
       run: |
         echo 'const electronInstaller = require("electron-winstaller");electronInstaller.createWindowsInstaller({appDirectory:"dist/rayyansaidi-desktop-win32-x64",outputDirectory:"dist/rayyansaidi-desktop-win32-x64/dist",authors:"Rayyan Saidi",exe:"rayyansaidi-desktop.exe"}),electronInstaller.createWindowsInstaller({appDirectory:"dist/rayyansaidi-desktop-win32-arm64",outputDirectory:"dist/rayyansaidi-desktop-win32-arm64/dist",authors:"Rayyan Saidi",exe:"rayyansaidi-desktop.exe"}),electronInstaller.createWindowsInstaller({appDirectory:"dist/rayyansaidi-desktop-win32-ia32",outputDirectory:"dist/rayyansaidi-desktop-win32-ia32/dist",authors:"Rayyan Saidi",exe:"rayyansaidi-desktop.exe"})' > win32.js
-        zip -r dist/rayyansaidi-desktop-darwin-x64/rayyansaidi-desktop.app rayyansaidi-desktop.app.zip
+        zip -r rayyansaidi-desktop.app.zip dist/rayyansaidi-desktop-darwin-x64/rayyansaidi-desktop.app
         node win32.js
         
     - name: Zip
