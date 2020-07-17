@@ -86,13 +86,13 @@ jobs:
     
     - name: Install
       run: npm install
+    - name: Remove
+      run: rm -rf .git
     # Runs a single command using the runners shell
     - name: Build
       run: npm run build
     - name: Tar
       run: tar -cvf dist.tar dist
-    - name: Remove
-      run: rm -rf .git
     # Runs a set of commands using the runners shell
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2
