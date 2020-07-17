@@ -10,17 +10,20 @@
     "package:win32": "electron-packager ./ --platform=win32 --arch=all --icon=./elmo.ico --out=./dist",
     "package:linux": "electron-packager ./ --platform=linux --arch=all --icon=./elmo.png --out=./dist",
     "build:darwin:dmg": "appdmg dmg.json dist/rayyansaidi-desktop-darwin-x64/dist/rayyansaidi-desktop.dmg",
-    "build:darwin:pkg": "pkgbuild --component ./dist/rayyansaidi-desktop-darwin-x64/rayyansaidi-desktop.app ./dist/rayyansaidi-desktop-darwin-x64/dist/rayyansaidi-desktop.pkg"
+    "build:darwin:pkg": "pkgbuild --component ./dist/rayyansaidi-desktop-darwin-x64/rayyansaidi-desktop.app ./dist/rayyansaidi-desktop-darwin-x64/dist/rayyansaidi-desktop.pkg",
+    "build": "electron-builder"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Rayyan Saidi and Nathan Chu",
+  "license": "GPL-3.0-or-later",
   "devDependencies": {
     "electron": "^8.3.4",
+    "electron-builder": "^22.7.0",
     "electron-packager": "^15.0.0",
     "electron-winstaller": "^4.0.1"
   },
   "optionalDependencies": {
     "appdmg": "^0.6.0"
-  }
+  },
+  "dependencies": {}
 }
