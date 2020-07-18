@@ -93,7 +93,7 @@ jobs:
     - name: Setup
       uses: actions/setup-node@v2.1.0
       with:
-        node-version: 14.5.0
+        node-version: 12.x
     
     - name: Install
       run: npm install && npm install --save-dev macos-alias
@@ -102,8 +102,7 @@ jobs:
     # Runs a single command using the runners shell
     - name: Build
       run: |
-        npm run build -m pkg
-        npm run build:darwin:dmg
+        npm run build
     - name: Tar
       run: tar -cvf dist.tar dist
     # Runs a set of commands using the runners shell
