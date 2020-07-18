@@ -24,4 +24,17 @@
   "optionalDependencies": {
     "appdmg": "^0.6.0"
   },
+  "build": {
+    "dmg": {
+              "title": "Install",
+              "format": "UDZO",
+              "contents": [
+                { "x": 445, "y": 290, "type": "link", "path": "/Applications" },
+                { "x": 445, "y": 140, "type": "dir", "path": "rayyansaidi-desktop.app" },
+                { "x": 650, "y": 450, "type": "file", "path": ".background" },
+                { "x": 650, "y": 450, "type": "file", "path": ".VolumeIcon.icns" },
+                { "x": 650, "y": 450, "type": "file", "path": ".DS_Store" }
+              ]
+            }
+  }
 }
