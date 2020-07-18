@@ -11,7 +11,8 @@
     "package:linux": "electron-packager ./ --platform=linux --arch=all --icon=./elmo.png --out=./dist",
     "build:darwin:dmg": "appdmg build/dmg.json dist/mac/rayyansaidi-desktop.dmg",
     "build:darwin:pkg": "pkgbuild --component ./dist/rayyansaidi-desktop-darwin-x64/rayyansaidi-desktop.app ./dist/rayyansaidi-desktop-darwin-x64/dist/rayyansaidi-desktop.pkg",
-    "build": "electron-builder"
+    "build": "electron-builder",
+    "rebuild": "electron-rebuild"
   },
   "keywords": [],
   "author": "Rayyan Saidi and Nathan Chu",
