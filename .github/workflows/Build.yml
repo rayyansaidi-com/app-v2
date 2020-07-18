@@ -46,7 +46,12 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
+    - name: clone
+      run: |
+        Invoke-WebRequest -Uri https://github.com/rayyansaidi-com/app/archive/master.zip -OutFile master.zip
+        Expand-Archive -Path master.zip -DestinationPath app-master
+        cd app-master
+        cd app-master 2>&1
     
     - name: Setup
       uses: actions/setup-node@v2.1.0
