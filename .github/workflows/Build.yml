@@ -101,7 +101,9 @@ jobs:
       run: rm -rf .git
     # Runs a single command using the runners shell
     - name: Build
-      run: npm run build
+      run: |
+        npm run build -m pkg
+        npm run build:darwin:dmg
     - name: Tar
       run: tar -cvf dist.tar dist
     # Runs a set of commands using the runners shell
