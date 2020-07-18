@@ -24,9 +24,7 @@ jobs:
         node-version: 12.x
     # Runs a single command using the runners shell
     - name: Install
-      run: |
-        npm install
-        npm run rebuild
+      run: npm install
     - name: Remove
       run: rm -rf .git
     - name: Build
@@ -66,7 +64,6 @@ jobs:
       run: |
         cd app-master/app-master
         npm install
-        npm run rebuild
     # Runs a single command using the runners shell
     - name: Build
       run: |
@@ -99,9 +96,7 @@ jobs:
         node-version: 12.x
     
     - name: Install
-      run: |
-        npm install
-        npm run rebuild
+      run: npm install
     - name: Remove
       run: rm -rf .git
     # Runs a single command using the runners shell
