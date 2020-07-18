@@ -21,7 +21,7 @@ jobs:
     - name: Setup
       uses: actions/setup-node@v2.1.0
       with:
-        node-version: 14.5.0
+        node-version: 12.x
     # Runs a single command using the runners shell
     - name: Install
       run: npm install
@@ -93,7 +93,7 @@ jobs:
     - name: Setup
       uses: actions/setup-node@v2.1.0
       with:
-        node-version: 12.15.x
+        node-version: 14.5.0
     
     - name: Install
       run: npm install && npm install --save-dev macos-alias
