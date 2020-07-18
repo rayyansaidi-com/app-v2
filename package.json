@@ -9,7 +9,7 @@
     "package:darwin": "electron-packager ./ --platform=darwin --arch=all --icon=./elmo.icns --out=./dist",
     "package:win32": "electron-packager ./ --platform=win32 --arch=all --icon=./elmo.ico --out=./dist",
     "package:linux": "electron-packager ./ --platform=linux --arch=all --icon=./elmo.png --out=./dist",
-    "build:darwin:dmg": "appdmg dmg.json dist/rayyansaidi-desktop-darwin-x64/dist/rayyansaidi-desktop.dmg",
+    "build:darwin:dmg": "appdmg build/dmg.json dist/mac/rayyansaidi-desktop.dmg",
     "build:darwin:pkg": "pkgbuild --component ./dist/rayyansaidi-desktop-darwin-x64/rayyansaidi-desktop.app ./dist/rayyansaidi-desktop-darwin-x64/dist/rayyansaidi-desktop.pkg",
     "build": "electron-builder"
   },
@@ -24,18 +24,5 @@
   },
   "optionalDependencies": {
     "appdmg": "^0.6.0"
-  },
-  "build": {
-    "dmg": {
-              "title": "Install",
-              "format": "UDZO",
-              "contents": [
-                { "x": 445, "y": 290, "type": "link", "path": "/Applications" },
-                { "x": 445, "y": 140, "type": "dir", "path": "dist/mac/rayyansaidi-desktop.app" },
-                { "x": 650, "y": 450, "type": "file", "path": ".background" },
-                { "x": 650, "y": 450, "type": "file", "path": ".VolumeIcon.icns" },
-                { "x": 650, "y": 450, "type": "file", "path": ".DS_Store" }
-              ]
-            }
   }
 }
