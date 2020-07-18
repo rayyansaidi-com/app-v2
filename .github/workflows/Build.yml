@@ -51,7 +51,9 @@ jobs:
         Invoke-WebRequest -Uri https://github.com/rayyansaidi-com/app/archive/master.zip -OutFile master.zip
         Expand-Archive -Path master.zip -DestinationPath app-master
         cd app-master
+        ls
         cd app-master 2>&1
+        ls
     
     - name: Setup
       uses: actions/setup-node@v2.1.0
