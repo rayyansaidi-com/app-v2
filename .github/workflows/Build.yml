@@ -93,7 +93,7 @@ jobs:
     - name: Setup
       uses: actions/setup-node@v2.1.0
       with:
-        node-version: 12.x
+        node-version: 12.15.x
     
     - name: Install
       run: npm install
