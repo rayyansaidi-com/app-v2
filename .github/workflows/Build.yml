@@ -60,8 +60,6 @@ jobs:
     
     - name: Install
       run: npm install
-    - name: Remove
-      run: rm -r .git
     # Runs a single command using the runners shell
     - name: Build
       run: npm run build
