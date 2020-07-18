@@ -24,7 +24,7 @@ jobs:
         node-version: 12.x
     # Runs a single command using the runners shell
     - name: Install
-      run: npm install && npm install --save-dev macos-alias
+      run: npm install
     - name: Remove
       run: rm -rf .git
     - name: Build
@@ -96,7 +96,7 @@ jobs:
         node-version: 12.15.x
     
     - name: Install
-      run: npm install
+      run: npm install && npm install --save-dev macos-alias
     - name: Remove
       run: rm -rf .git
     # Runs a single command using the runners shell
