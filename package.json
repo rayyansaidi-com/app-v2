@@ -25,5 +25,19 @@
   "optionalDependencies": {
     "appdmg": "^0.6.0"
   },
-  "dependencies": {}
+  "build": {
+    "dmg": {
+              "title": "Install",
+              "icon": "/Volumes/rayyansaidi.com/rayyansaidi.com.app/Contents/Resources/Elmo.icns",
+              "background": "background.png",
+              "format": "UDZO",
+              "contents": [
+                { "x": 445, "y": 290, "type": "link", "path": "/Applications" },
+                { "x": 445, "y": 140, "type": "position", "path": "rayyansaidi-desktop.app" },
+                { "x": 650, "y": 450, "type": "position", "path": ".background" },
+                { "x": 650, "y": 450, "type": "position", "path": ".VolumeIcon.icns" },
+                { "x": 650, "y": 450, "type": "position", "path": ".DS_Store" }
+              ]
+            }
+  }
 }
