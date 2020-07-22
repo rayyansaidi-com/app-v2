@@ -32,6 +32,31 @@
                 { "x": 445, "y": 140 },
                 { "x": 445, "y": 290, "type": "link", "path": "/Applications" }
               ]
-            }
+            },
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": ["x64"]
+        }
+      ]
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        {
+          "target": "snap",
+          "arch": ["x64"]
+        }
+      ]
+    },
+    "productName": "Rayyansaidi Desktop"
   }
 }

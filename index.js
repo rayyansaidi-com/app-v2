@@ -17,7 +17,7 @@ function createWindow() {
   win.loadFile('src/index.html')
   var menu = Menu.buildFromTemplate([
     {
-      label: 'rayyansaidi.com',
+      label: 'Rayyansaidi Desktop',
       submenu: [
         {
           label: 'Quit',
