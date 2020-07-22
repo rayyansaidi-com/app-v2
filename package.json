@@ -31,7 +31,11 @@
               "contents": [
                 { "x": 445, "y": 140 },
                 { "x": 445, "y": 290, "type": "link", "path": "/Applications" }
-              ]
+              ],
+              "window": {
+                "width": 576,
+                "height": 404
+              }
             },
     "mac": {
       "target": [
