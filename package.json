@@ -17,7 +17,7 @@
   "author": "Rayyan Saidi and Nathan Chu",
   "license": "GPL-3.0-or-later",
   "devDependencies": {
-    "electron": "^8.3.4",
+    "electron": "^8.4.1",
     "electron-builder": "^22.7.0",
     "electron-packager": "^15.0.0"
   },
@@ -26,22 +26,32 @@
   },
   "build": {
     "dmg": {
-              "title": "Install",
-              "format": "UDZO",
-              "contents": [
-                { "x": 445, "y": 140 },
-                { "x": 445, "y": 290, "type": "link", "path": "/Applications" }
-              ],
-              "window": {
-                "width": 576,
-                "height": 404
-              }
-            },
+      "title": "Install",
+      "format": "UDZO",
+      "contents": [
+        {
+          "x": 445,
+          "y": 140
+        },
+        {
+          "x": 445,
+          "y": 290,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ],
+      "window": {
+        "width": 576,
+        "height": 404
+      }
+    },
     "mac": {
       "target": [
         {
           "target": "dmg",
-          "arch": ["x64"]
+          "arch": [
+            "x64"
+          ]
         }
       ]
     },
@@ -49,7 +59,9 @@
       "target": [
         {
           "target": "nsis",
-          "arch": ["x64"]
+          "arch": [
+            "x64"
+          ]
         }
       ]
     },
@@ -57,7 +69,9 @@
       "target": [
         {
           "target": "snap",
-          "arch": ["x64"]
+          "arch": [
+            "x64"
+          ]
         }
       ]
     },
