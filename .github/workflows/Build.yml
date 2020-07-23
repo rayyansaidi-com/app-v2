@@ -34,9 +34,9 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         # Artifact name
-        name: Ubuntu # optional
+        name: snap # optional
         # A file, directory or wildcard pattern that describes what to upload
-        path: dist/rayyansaidi-desktop*.snap
+        path: dist/*.snap
   Windows:
     # The type of runner that the job will run on
     runs-on: windows-latest
@@ -72,9 +72,9 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         # Artifact name
-        name: Windows # optional
+        name: exe # optional
         # A file, directory or wildcard pattern that describes what to upload
-        path: app-master/app-master/dist/rayyansaidi-desktop*.exe
+        path: app-master/app-master/dist/*.exe
   MacOS:
     # The type of runner that the job will run on
     runs-on: macos-latest
@@ -102,6 +102,6 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         # Artifact name
-        name: MacOS # optional
+        name: dmg # optional
         # A file, directory or wildcard pattern that describes what to upload
-        path: dist/rayyansaidi-desktop*.dmg
+        path: dist/*.dmg
