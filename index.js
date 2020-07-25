@@ -12,7 +12,8 @@ function createWindow() {
     height: 600,
     webPreferences: {
       nodeIntegration: true
-    }
+    },
+    vibrancy: "sidebar",
   })
   win.loadFile('src/index.html')
   var menu = Menu.buildFromTemplate([
