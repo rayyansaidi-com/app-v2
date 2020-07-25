@@ -76,5 +76,8 @@
       ]
     },
     "productName": "Rayyansaidi Desktop"
+  },
+  "dependencies": {
+    "semver": "^7.3.2"
   }
 }
