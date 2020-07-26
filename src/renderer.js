@@ -1,17 +1,17 @@
-setTimeout(autoUpdate(), 1000)
+setTimeout(autoUpdate(), 1000);
 function autoUpdate() {
-  const semverGt = require('semver/functions/gt')
+  const semverGt = require('semver/functions/gt');
   const appVersion = require("electron").remote.app.getVersion();
-  const { dialog, shell } = require("electron").remote
+  const { dialog, shell } = require("electron").remote();
   var request = new XMLHttpRequest();
   request.open('GET', 'https://api.github.com/repositories/275879561/releases', true);
-  const os = process.platform
+  const os = process.platform();
   request.onload = function () {
     if (this.status >= 200 && this.status < 400) {
       // Success!
       var data = JSON.parse(this.response);
       data = data[0]["tag_name"]
-      if (semverGt("5.0.0", appVersion)) {
+      if (semverGt(data, appVersion)) {
         console.log("update!");
         if (os == "darwin") {
           const updateDialog = dialog.showMessageBoxSync({
@@ -28,7 +28,7 @@ function autoUpdate() {
           if (updateDialog == 1) {
             shell.openExternal('https://github.com/rayyansaidi-com/app/releases/latest')
           }
-        };
+        } else {
         if (os == "linux") {
           const updateDialog = dialog.showMessageBoxSync({
             "buttons": [
@@ -44,7 +44,7 @@ function autoUpdate() {
           if (updateDialog == 1) {
             shell.openExternal('https://github.com/rayyansaidi-com/app/releases/latest')
           }
-        };
+        } else {
         if (os == "win32") {
           const updateDialog = dialog.showMessageBoxSync({
             "buttons": [
@@ -60,7 +60,7 @@ function autoUpdate() {
           if (updateDialog == 1) {
             shell.openExternal('https://github.com/rayyansaidi-com/app/releases/latest')
           }
-        };
+        };}}
       } 
       // else {
       // 	console.log("You have the newest version")
