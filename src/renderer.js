@@ -28,8 +28,7 @@ function autoUpdate() {
           if (updateDialog == 1) {
             shell.openExternal('https://github.com/rayyansaidi-com/app/releases/latest')
           }
-        };
-        if (os == "linux") {
+        } else if (os == "linux") {
           const updateDialog = dialog.showMessageBoxSync({
             "buttons": [
               "Update for macOS", "I want to see the changes", "I don't want to update"
@@ -44,8 +43,7 @@ function autoUpdate() {
           if (updateDialog == 1) {
             shell.openExternal('https://github.com/rayyansaidi-com/app/releases/latest')
           }
-        };
-        if (os == "win32") {
+        } else if (os == "win32") {
           const updateDialog = dialog.showMessageBoxSync({
             "buttons": [
               "Update for Windows", "I want to see the changes", "I don't want to update"
