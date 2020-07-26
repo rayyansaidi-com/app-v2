@@ -1,25 +1,28 @@
 setTimeout(autoUpdate(), 1000)
+const semverGt = require('semver/functions/gt')
+const appVersion = require("electron").remote.app.getVersion();
+const { dialog, shell } = require("electron").remote
+const os = process.platform
 function autoUpdate() {
-  const semverGt = require('semver/functions/gt')
-  const appVersion = require("electron").remote.app.getVersion();
-  const { dialog, shell } = require("electron").remote
   var request = new XMLHttpRequest();
   request.open('GET', 'https://api.github.com/repositories/275879561/releases', true);
-  const os = process.platform
   request.onload = function () {
     if (this.status >= 200 && this.status < 400) {
       // Success!
       var data = JSON.parse(this.response);
       data = data[0]["tag_name"]
-      if (semverGt(data, appVersion)) {
+      if (semverGt("5.0.0", appVersion)) {
         console.log("update!");
         if (os == "darwin") {
-          console.log('darwin')
+          darwinDialog();
         } else if (os == "linux") {
-          console.log('linux')
+          linuxDialog();
         } else if (os == "win32") {
-          console.log('win32')
-        };
+          win32Dialog();
+        } else {
+          console.error('error')
+        }
+        
       } 
       // else {
       // 	console.log("You have the newest version")
@@ -55,14 +58,14 @@ function darwinDialog() {
 function linuxDialog() {
   const updateDialog = dialog.showMessageBoxSync({
     "buttons": [
-      "Update for macOS", "I want to see the changes", "I don't want to update"
+      "Update for linux", "I want to see the changes", "I don't want to update"
     ],
     "defaultId": 0,
     "message": "There's an update for this app."
   }
   );
   if (updateDialog == 0) {
-    shell.openExternal('https://github.com/rayyansaidi-com/app/releases/latest/download/rayyansaidi-desktop.dmg')
+    shell.openExternal('https://github.com/rayyansaidi-com/app/releases/latest/download/rayyansaidi-desktop.snap')
   }
   if (updateDialog == 1) {
     shell.openExternal('https://github.com/rayyansaidi-com/app/releases/latest')
