@@ -172,7 +172,9 @@ input {
     border: 0;
     color: #fff;
     text-align: center;
+    width: calc(100vw - 512px);
 }
+
 #screenshot {
     position: absolute;
     bottom:20px;
@@ -234,6 +236,5 @@ input {
     body {
         text-align: center;
     }
-    input {width: calc(100vw - 512px);}
     img {width: calc(100vw - 128px)!important;}
 }
