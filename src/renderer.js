@@ -14,50 +14,11 @@ function autoUpdate() {
       if (semverGt(data, appVersion)) {
         console.log("update!");
         if (os == "darwin") {
-          const updateDialog = dialog.showMessageBoxSync({
-            "buttons": [
-              "Update for macOS",  "I want to see the changes", "I don't want to update"
-            ],
-            "defaultId": 0,
-            "message": "There's an update for this app."
-          }
-          );
-          if (updateDialog == 0) {
-            shell.openExternal('https://github.com/rayyansaidi-com/app/releases/latest/download/rayyansaidi-desktop.dmg')
-          }
-          if (updateDialog == 1) {
-            shell.openExternal('https://github.com/rayyansaidi-com/app/releases/latest')
-          }
+          console.log('darwin')
         } else if (os == "linux") {
-          const updateDialog = dialog.showMessageBoxSync({
-            "buttons": [
-              "Update for macOS", "I want to see the changes", "I don't want to update"
-            ],
-            "defaultId": 0,
-            "message": "There's an update for this app."
-          }
-          );
-          if (updateDialog == 0) {
-            shell.openExternal('https://github.com/rayyansaidi-com/app/releases/latest/download/rayyansaidi-desktop.dmg')
-          }
-          if (updateDialog == 1) {
-            shell.openExternal('https://github.com/rayyansaidi-com/app/releases/latest')
-          }
+          console.log('linux')
         } else if (os == "win32") {
-          const updateDialog = dialog.showMessageBoxSync({
-            "buttons": [
-              "Update for Windows", "I want to see the changes", "I don't want to update"
-            ],
-            "defaultId": 0,
-            "message": "There's an update for this app."
-          }
-          );
-          if (updateDialog == 0) {
-            shell.openExternal('https://github.com/rayyansaidi-com/app/releases/latest/download/rayyansaidi-desktop.exe')
-          }
-          if (updateDialog == 1) {
-            shell.openExternal('https://github.com/rayyansaidi-com/app/releases/latest')
-          }
+          console.log('win32')
         };
       } 
       // else {
@@ -74,4 +35,52 @@ function autoUpdate() {
   };
 
   request.send();
+}
+function darwinDialog() {
+  const updateDialog = dialog.showMessageBoxSync({
+    "buttons": [
+      "Update for macOS",  "I want to see the changes", "I don't want to update"
+    ],
+    "defaultId": 0,
+    "message": "There's an update for this app."
+  }
+  );
+  if (updateDialog == 0) {
+    shell.openExternal('https://github.com/rayyansaidi-com/app/releases/latest/download/rayyansaidi-desktop.dmg')
+  }
+  if (updateDialog == 1) {
+    shell.openExternal('https://github.com/rayyansaidi-com/app/releases/latest')
+  }
+}
+function linuxDialog() {
+  const updateDialog = dialog.showMessageBoxSync({
+    "buttons": [
+      "Update for macOS", "I want to see the changes", "I don't want to update"
+    ],
+    "defaultId": 0,
+    "message": "There's an update for this app."
+  }
+  );
+  if (updateDialog == 0) {
+    shell.openExternal('https://github.com/rayyansaidi-com/app/releases/latest/download/rayyansaidi-desktop.dmg')
+  }
+  if (updateDialog == 1) {
+    shell.openExternal('https://github.com/rayyansaidi-com/app/releases/latest')
+  }
+}
+function win32Dialog() {
+  const updateDialog = dialog.showMessageBoxSync({
+    "buttons": [
+      "Update for Windows", "I want to see the changes", "I don't want to update"
+    ],
+    "defaultId": 0,
+    "message": "There's an update for this app."
+  }
+  );
+  if (updateDialog == 0) {
+    shell.openExternal('https://github.com/rayyansaidi-com/app/releases/latest/download/rayyansaidi-desktop.exe')
+  }
+  if (updateDialog == 1) {
+    shell.openExternal('https://github.com/rayyansaidi-com/app/releases/latest')
+  }
 }
