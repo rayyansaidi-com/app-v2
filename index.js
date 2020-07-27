@@ -15,36 +15,76 @@ function createWindow() {
     },
     vibrancy: "sidebar",
   })
+  // and load the index.html of the app.
   win.loadFile('src/index.html')
   var menu = Menu.buildFromTemplate([
     {
       label: 'Rayyansaidi Desktop',
       submenu: [
         {
+          label: 'Open DevTools',
+          accelerator: 'CmdOrCtrl+I',
+          click() {
+            win.webContents.openDevTools()
+          }
+        },
+        { type: "separator" },
+        {
           label: 'Quit',
           accelerator: 'CmdOrCtrl+Q',
           click() {
             app.quit()
           }
-        },
-        {
-          label: 'Open DevTools',
-          click() {
-            win.webContents.openDevTools()
-          }
         }
       ]
-    }
+    },
+    {
+      label: "Edit",
+      submenu: [
+        { 
+          label: "Cut", 
+          accelerator: "CmdOrCtrl+X", 
+          selector: "cut:" 
+        },
+        { 
+          label: "Copy", 
+          accelerator: "CmdOrCtrl+C", 
+          selector: "copy:" 
+        },
+        { 
+          label: "Paste", 
+          accelerator: "CmdOrCtrl+V", 
+          selector: "paste:" 
+        },
+        { type: "separator" },
+        { 
+          label: "Select All",
+          accelerator: "CmdOrCtrl+A",
+          selector: "selectAll:" 
+        },
+        { type: "separator" },
+        {
+          label: "Find"
+        }
+      ]
+    },
+    {
+      label: "Help",
+      submenu: [
+        { 
+          label: "Test", 
+          click() {
+            app.quit()
+          } 
+        }
+      ]
+    },
   ])
   Menu.setApplicationMenu(menu);
-  // and load the index.html of the app.
   // Open the DevTools.
   // win.webContents.openDevTools()
 }
 
-// This method will be called when Electron has finished
-// initialization and is ready to create browser windows.
-// Some APIs can only be used after this event occurs.
 app.whenReady().then(createWindow)
 
 app.on('window-all-closed', () => {
