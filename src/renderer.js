@@ -58,7 +58,7 @@ function darwinDialog() {
 function linuxDialog() {
   const updateDialog = dialog.showMessageBoxSync({
     "buttons": [
-      "Update for linux", "I want to see the changes", "I don't want to update"
+      "Update for Linux", "I want to see the changes", "I don't want to update"
     ],
     "defaultId": 0,
     "message": "There's an update for this app."
