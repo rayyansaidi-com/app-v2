@@ -1,4 +1,4 @@
-setTimeout(autoUpdate(), 1000)
+setTimeout(autoUpdate(), 5000)
 const semverGt = require('semver/functions/gt')
 const appVersion = require("electron").remote.app.getVersion();
 const { dialog, shell } = require("electron").remote
@@ -11,8 +11,8 @@ function autoUpdate() {
       // Success!
       var data = JSON.parse(this.response);
       data = data[0]["tag_name"]
-      if (semverGt("5.0.0", appVersion)) {
-        console.log("update!");
+      if (semverGt(data, appVersion)) {
+        // console.log("update!");
         if (os == "darwin") {
           darwinDialog();
         } else if (os == "linux") {
@@ -29,12 +29,13 @@ function autoUpdate() {
       // }
     } else {
       // We reached our target server, but it returned an error
-      console.error("Error! Autoupdate is broken. Report an error on github at https://github.com/rayyansaidi-com/app/issues/new")
+      console.error("Error! Autoupdate is broken. Report an error on github at https://github.com/rayyansaidi-com/app/issues/new (32)")
     }
   };
 
   request.onerror = function () {
     // There was a connection error of some sort
+    console.error("Error! Autoupdate is broken. Report an error on github at https://github.com/rayyansaidi-com/app/issues/new (38)")
   };
 
   request.send();
