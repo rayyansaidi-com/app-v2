@@ -2,6 +2,7 @@ const { app, BrowserWindow, Menu } = require('electron');
 const shell = require('electron').shell;
 const electron = require('electron');
 const path = require('path');
+require('electron-reload')(__dirname)
 // const server = 'https://hazel.mrsun10.vercel.app/'
 // const url = `${server}/update/${process.platform}/${app.getVersion()}`
 
@@ -34,6 +35,14 @@ function createWindow() {
           accelerator: 'CmdOrCtrl+Q',
           click() {
             app.quit()
+          }
+        },
+        { type: "separator" },
+        {
+          label: 'Print',
+          accelerator: 'CmdOrCtrl+P',
+          click() {
+            win.webContents.print()
           }
         }
       ]
@@ -100,18 +109,7 @@ function createWindow() {
           }
         },
       ]
-    },
-    {
-      label: "Help",
-      submenu: [
-        { 
-          label: "Test", 
-          click() {
-            app.quit()
-          } 
-        }
-      ]
-    },
+    }
   ])
   Menu.setApplicationMenu(menu);
   // Open the DevTools.
