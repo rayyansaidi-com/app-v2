@@ -6,6 +6,10 @@ body {
     margin: 1.5rem;
 }
 
+img {
+    width: calc(100vw - 400px)!important;
+}
+
 .main {
     width: calc(100% - 16.5rem);
     margin-left: 16.5rem;
@@ -217,7 +221,6 @@ input {
         display: block!important;
     }
     img {
-        width: 300px!important;
         margin: 0 auto;
     }
     .main {
@@ -236,5 +239,4 @@ input {
     body {
         text-align: center;
     }
-    img {width: calc(100vw - 128px)!important;}
 }

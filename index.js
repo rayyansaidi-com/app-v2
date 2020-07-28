@@ -23,7 +23,7 @@ function createWindow() {
       submenu: [
         {
           label: 'Open DevTools',
-          accelerator: 'CmdOrCtrl+I',
+          accelerator: 'CmdOrCtrl+Alt+I',
           click() {
             win.webContents.openDevTools()
           }
@@ -64,8 +64,41 @@ function createWindow() {
         },
         { type: "separator" },
         {
-          label: "Find"
+          label: "Find",
+          accelerator: "CmdOrCtrl+A"
+
         }
+      ]
+    },
+    {
+      label: "GitHub",
+      submenu: [
+        {
+          label: "View Source Code",
+          click() {
+            shell.openExternal('https://github.com/rayyansaidi-com/app')
+          }
+        },
+        { type: "separator" },
+        {
+          label: "Report a Problem",
+          click() {
+            shell.openExternal('https://github.com/rayyansaidi-com/app/issues/new')
+          }
+        },
+        { type: "separator" },
+        {
+          label: "View the information (README.md)",
+          click() {
+            shell.openExternal('https://github.com/rayyansaidi-com/app/blob/README.md')
+          }
+        },
+        {
+          label: "View the current and future changelog (CHANGELOG.md)",
+          click() {
+            shell.openExternal('https://github.com/rayyansaidi-com/app/blob/CHANGELOG.md')
+          }
+        },
       ]
     },
     {
