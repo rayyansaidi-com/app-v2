@@ -181,8 +181,8 @@ input {
 
 #screenshot {
     position: absolute;
-    bottom:20px;
-    left:20px;
+    top: calc(100vw - 20px);
+    left: calc(25% * 100vw);
     display: none;
     background-color: #303030;
 }
