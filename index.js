@@ -105,7 +105,7 @@ function createWindow() {
         {
           label: "View the current and future changelog (CHANGELOG.md)",
           click() {
-            shell.openExternal('https://github.com/rayyansaidi-com/app/blob/CHANGELOG.md')
+            shell.openExternal('https://github.com/rayyansaidi-com/app/blob/master/CHANGELOG.md')
           }
         },
       ]
