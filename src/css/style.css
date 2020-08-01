@@ -124,6 +124,14 @@ button {
     color: gold;
 }
 
+.btn-purple {
+    background-color: #6f42c1;
+}
+
+.btn-green {
+    background-color: green;
+}
+
 h1 {
     font-size: 60px;
     color: gold;
