@@ -1,7 +1,7 @@
 {
   "name": "rayyansaidi-desktop",
   "version": "2.2.0",
-  "description": "rayyansaidi-desktop",
+  "description": "This is the app version of rayyansaidi.com",
   "main": "index.js",
   "scripts": {
     "start": "electron .",
@@ -19,9 +19,7 @@
   "devDependencies": {
     "electron": "^8.4.1",
     "electron-builder": "^22.7.0",
-    "electron-packager": "^15.0.0"
-  },
-  "optionalDependencies": {
+    "semver": "^7.3.2",
     "appdmg": "^0.6.0"
   },
   "build": {
@@ -74,10 +72,6 @@
           ]
         }
       ]
-    },
-    "productName": "Rayyansaidi Desktop"
-  },
-  "dependencies": {
-    "semver": "^7.3.2"
+    }
   }
 }
