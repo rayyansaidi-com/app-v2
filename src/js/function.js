@@ -26,6 +26,7 @@ function Rayyansaidi() {
     document.getElementById('table').style.display = 'none';
     document.getElementById('play').style.display = 'none';
     b.style.display = 'none';
+    sBtn.style.display = 'none';
 }
 function Treasure() {
     x.style.display = 'none';
@@ -35,6 +36,7 @@ function Treasure() {
     p.style.margin = '0 auto';
     a.style.display = 'none';
     b.style.display = 'none';
+    sBtn.style.display = 'none';
 }
 // Holiday Templates
 function holiday() {
@@ -50,6 +52,7 @@ function holiday() {
     b.style.display = 'block';
     document.getElementById('table').style.display = 'none';
     document.getElementById('play').style.display = 'none';
+    sBtn.style.display = 'none';
 }
 function Birthday() {
     aa.style.display = 'none';
@@ -57,7 +60,7 @@ function Birthday() {
     cc.style.display = 'none';
     dd.style.display = 'none';
     ee.style.display = 'none';
-    sBtn.style.display = 'block'
+    sBtn.style.display = 'block';
     sBtn.addEventListener('click', () => {
         document.getElementById('screenshot-output').setAttribute('disabled', 'disabled');
         html2canvas(bb, { backgroundColor: "#222222" }).then(canvas => {
@@ -76,7 +79,7 @@ function Father() {
     cc.style.display = 'block';
     dd.style.display = 'none';
     ee.style.display = 'none';
-    sBtn.style.display = 'block'
+    sBtn.style.display = 'block';
     sBtn.addEventListener('click', () => {
         document.getElementById('screenshot-output').setAttribute('disabled', 'disabled');
         html2canvas(cc, { backgroundColor: "#222222" }).then(canvas => {
@@ -95,7 +98,7 @@ function Mom() {
     cc.style.display = 'none';
     dd.style.display = 'block';
     ee.style.display = 'none';
-    sBtn.style.display = 'block'
+    sBtn.style.display = 'block';
     sBtn.addEventListener('click', () => {
         document.getElementById('screenshot-output').setAttribute('disabled', 'disabled');
         html2canvas(dd, { backgroundColor: "#222222" }).then(canvas => {
@@ -114,7 +117,7 @@ function Val() {
     cc.style.display = 'none';
     dd.style.display = 'none';
     ee.style.display = 'block';
-    sBtn.style.display = 'block'
+    sBtn.style.display = 'block';
     sBtn.addEventListener('click', () => {
         document.getElementById('screenshot-output').setAttribute('disabled', 'disabled');
         html2canvas(ee, { backgroundColor: "#222222" }).then(canvas => {
