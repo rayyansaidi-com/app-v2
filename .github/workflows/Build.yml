@@ -123,4 +123,4 @@ jobs:
         with:
           name: snap
           path: dist
-      - name: ls -r
+      - run: ls -r
