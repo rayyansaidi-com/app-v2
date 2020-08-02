@@ -107,3 +107,20 @@ jobs:
         name: dmg # optional
         # A file, directory or wildcard pattern that describes what to upload
         path: dist/*.dmg
+  Release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/download-artifact@v2
+        with:
+          name: dmg
+          path: dist
+      - uses: actions/download-artifact@v2
+        with:
+          name: exe
+          path: dist
+      - uses: actions/download-artifact@v2
+        with:
+          name: snap
+          path: dist
+      - name: ls -r
