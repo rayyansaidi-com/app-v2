@@ -7,4 +7,7 @@
 - When you go to home,or treasure hunt from holiday templates, the screenshot button disapears
 
 ## Changes planed for 2.3.0
-There are no changes planed for 2.3.0, but if you tell us an issue at [this link](https://github.com/rayyansaidi-com/app/issues), we will try to fix it.
+- The content will be changed
+- The screenshot button will be inproved
+- The autoupdater will have a never ask me again option
+- More fetures will be added
