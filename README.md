@@ -8,6 +8,6 @@
 <img align="center" width="100%" src="src/Images/rayyansaidi.gif">
 
 ## Contribuators
-<hr>
+
 - Rayyan Saidi
 - Nathan Chu
