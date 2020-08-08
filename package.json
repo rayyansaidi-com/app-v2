@@ -17,8 +17,8 @@
   "author": "Rayyan Saidi and Nathan Chu",
   "license": "GPL-3.0-or-later",
   "devDependencies": {
-    "electron": "^8.4.1",
-    "electron-builder": "^22.7.0"
+    "electron": "^8.5.0",
+    "electron-builder": "^22.8.0"
   },
   "dependencies": {
     "semver": "^7.3.2"
