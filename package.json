@@ -1,6 +1,6 @@
 {
   "name": "rayyansaidi-desktop",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "This is the app version of rayyansaidi.com",
   "main": "index.js",
   "scripts": {
