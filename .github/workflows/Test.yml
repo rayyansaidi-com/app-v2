@@ -34,8 +34,7 @@ jobs:
     - name: Test
       run: |
        yarn install
-       yarn start &
-       sleep 5
+       yarn start & sleep 15 ; kill $!
   windows:
     runs-on: windows-latest
     steps:
