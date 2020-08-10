@@ -1,5 +1,5 @@
 # Rayyansaidi-Desktop
-## This is the app version of <a href="https://rayyansaidi.com/">rayyansaidi.com</a>
+## This is the app version of [rayyansaidi.com](https://rayyansaidi.com/)
 
 <img align="right" width="75%" src="src/Images/rayyansaidi.png">
 
