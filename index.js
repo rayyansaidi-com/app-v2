@@ -1,7 +1,7 @@
 const { app, BrowserWindow, nativeTheme, Menu, dialog } = require('electron');
 const shell = require('electron').shell;
 const electron = require('electron');
-const path = require('path');
+const isOnline = require('is-online');
 // const server = 'https://hazel.mrsun10.vercel.app/'
 // const url = `${server}/update/${process.platform}/${app.getVersion()}`
 nativeTheme.themeSource = 'dark';
@@ -146,7 +146,7 @@ function createDeveloperWindow () {
       nodeIntegration: true
     }
   });
-  navigator.onLine() ? 
+  isOnline() ? 
   developerWindow.loadURL('https://developer.rayyansaidi.com/')
    : dialog.showMessageBox({
     "message": "Please turn on wifi to see this."
