@@ -249,8 +249,8 @@ input {
     }
 }
 
-@media (min-width: 576px) {
+@media (max-width: 610px) {
     #holiday {
-        display: none;
+        display: none!important;
     }
 }
