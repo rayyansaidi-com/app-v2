@@ -10,6 +10,8 @@ function createWindow() {
   const win = new BrowserWindow({
     width: 800,
     height: 600,
+    minWidth: 576,
+    minHeight: 600,
     webPreferences: {
       nodeIntegration: true
     },
@@ -138,18 +140,17 @@ app.on('activate', () => {
   }
 })
 
-function createDeveloperWindow () {
-  const developerWindow = new BrowserWindow({
+const createDeveloperWindow = async () =>  {
+  await isOnline() ? 
+  new BrowserWindow({
     width: 1200,
     height: 600,
     webPreferences: {
       nodeIntegration: true
     }
-  });
-  isOnline() ? 
-  developerWindow.loadURL('https://developer.rayyansaidi.com/')
+  }).loadURL('https://developer.rayyansaidi.com/')
    : dialog.showMessageBox({
-    "message": "Please turn on wifi to see this."
+    "message": "Please turn on wifi to see Rayyansaidi Developer"
    })
 }
 
