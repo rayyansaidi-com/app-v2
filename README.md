@@ -1,4 +1,4 @@
-# Rayyansaidi-Desktop&nbsp;&nbsp;&nbsp;<img src="https://github.com/rayyansaidi-com/app/workflows/Test/badge.svg" height="30">
+# Rayyansaidi-Desktop
 ## This is the app version of <a href="https://rayyansaidi.com/">rayyansaidi.com</a>
 
 <img align="right" width="75%" src="src/Images/rayyansaidi.png">
