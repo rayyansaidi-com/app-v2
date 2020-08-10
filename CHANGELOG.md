@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Changes for 2.2.0 - 2.2.2
 - Menu was changed
 - Position of screenshot button changed
@@ -8,3 +9,7 @@
 
 # Changes planed for 2.3.0
 ![2.3.0 changes](changelog.svg)
+=======
+## Changes for 2.1.0
+Screen Shot Button was added
+>>>>>>> parent of 8fae5f9... changelog
