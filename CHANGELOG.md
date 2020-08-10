@@ -7,4 +7,4 @@
 - When you go to home,or treasure hunt from holiday templates, the screenshot button disapears
 
 # Changes planed for 2.3.0
-![2.3.0 changes](changelog.svg)
+
