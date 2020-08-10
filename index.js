@@ -1,4 +1,4 @@
-const { app, BrowserWindow, nativeTheme, Menu } = require('electron');
+const { app, BrowserWindow, nativeTheme, Menu, dialog } = require('electron');
 const shell = require('electron').shell;
 const electron = require('electron');
 const path = require('path');
@@ -148,7 +148,9 @@ function createDeveloperWindow () {
   });
   navigator.onLine() ? 
   developerWindow.loadURL('https://developer.rayyansaidi.com/')
-   : developerWindow.loadFile('src/developer.html')
+   : dialog.showMessageBox({
+    "message": "Please turn on wifi to see this."
+   })
 }
 
 // In this file you can include the rest of your app's specific main process
