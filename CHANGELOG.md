@@ -11,4 +11,4 @@
 - As you resize the window by height, the sidebar’s height, and the text on the sidebar will get smaller
 - There will be a never ask me again button in the auto-updater
 - Rayyansaidi Developer will also go on the app.
-- I will use [react](https://reactjs.com/) in the app, and that will cause me to add MORE features, and MORE content!
+- I will use [react](https://reactjs.com/) in the app, and that will cause me to add MORE features, and MORE content!tent!

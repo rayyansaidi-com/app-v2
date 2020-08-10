@@ -2,7 +2,6 @@ const { app, BrowserWindow, nativeTheme, Menu } = require('electron');
 const shell = require('electron').shell;
 const electron = require('electron');
 const path = require('path');
-// require('electron-reload')(__dirname)
 // const server = 'https://hazel.mrsun10.vercel.app/'
 // const url = `${server}/update/${process.platform}/${app.getVersion()}`
 nativeTheme.themeSource = 'dark';
@@ -18,10 +17,17 @@ function createWindow() {
   })
   // and load the index.html of the app.
   win.loadFile('src/index.html')
-  var menu = Menu.buildFromTemplate([
+  const menu = Menu.buildFromTemplate([
     {
       label: 'Rayyansaidi Desktop',
       submenu: [
+        {
+          label: 'View Rayyansaidi Developer',
+          accelerator: 'CmdOrCtrl+D',
+          click() {
+            createDeveloperWindow();
+          }
+        },
         {
           label: 'Open DevTools',
           accelerator: 'CmdOrCtrl+Alt+I',
@@ -31,18 +37,18 @@ function createWindow() {
         },
         { type: "separator" },
         {
-          label: 'Quit',
-          accelerator: 'CmdOrCtrl+Q',
-          click() {
-            app.quit()
-          }
-        },
-        { type: "separator" },
-        {
           label: 'Print',
           accelerator: 'CmdOrCtrl+P',
           click() {
             win.webContents.print()
+          }
+        },
+        { type: "separator" },
+        {
+          label: 'Quit',
+          accelerator: 'CmdOrCtrl+Q',
+          click() {
+            app.quit()
           }
         }
       ]
@@ -131,6 +137,19 @@ app.on('activate', () => {
     createWindow()
   }
 })
+
+function createDeveloperWindow () {
+  const developerWindow = new BrowserWindow({
+    width: 1200,
+    height: 600,
+    webPreferences: {
+      nodeIntegration: true
+    }
+  });
+  navigator.onLine() ? 
+  developerWindow.loadURL('https://developer.rayyansaidi.com/')
+   : developerWindow.loadFile('src/developer.html')
+}
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
