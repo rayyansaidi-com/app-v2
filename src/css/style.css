@@ -23,11 +23,7 @@ img {
     height: calc(100vh - 3rem);
     top: 0;
     left: 0;
-<<<<<<< HEAD
     background-color:rgba(0, 0, 0, 0.25);
-=======
-    background-color: transparent;
->>>>>>> parent of 8fae5f9... changelog
 }
 
 .sidebar a {
@@ -250,5 +246,11 @@ input {
     }
     body {
         text-align: center;
+    }
+}
+
+@media (min-width: 576px) {
+    #holiday {
+        display: none;
     }
 }
