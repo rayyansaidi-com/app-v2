@@ -1,90 +1,89 @@
 setTimeout(autoUpdate(), 5000)
 const semverGt = require('semver/functions/gt')
-const appVersion = require("electron").remote.app.getVersion();
-const { dialog, shell } = require("electron").remote
+const appVersion = require('electron').remote.app.getVersion()
+const { dialog, shell } = require('electron').remote
 const os = process.platform
-function autoUpdate() {
-  var request = new XMLHttpRequest();
-  request.open('GET', 'https://api.github.com/repositories/275879561/releases', true);
+function autoUpdate () {
+  var request = new XMLHttpRequest()
+  request.open('GET', 'https://api.github.com/repositories/275879561/releases', true)
   request.onload = function () {
     if (this.status >= 200 && this.status < 400) {
       // Success!
-      var data = JSON.parse(this.response);
-      data = data[0]["tag_name"]
+      var data = JSON.parse(this.response)
+      data = data[0].tag_name
       if (semverGt(data, appVersion)) {
         // console.log("update!");
-        if (os == "darwin") {
-          darwinDialog();
-        } else if (os == "linux") {
-          linuxDialog();
-        } else if (os == "win32") {
-          win32Dialog();
+        if (os === 'darwin') {
+          darwinDialog()
+        } else if (os === 'linux') {
+          linuxDialog()
+        } else if (os === 'win32') {
+          win32Dialog()
         } else {
           console.error('error')
         }
-        
-      } 
+      }
       // else {
-      // 	console.log("You have the newest version")
+      //  console.log("You have the newest version")
       // }
     } else {
       // We reached our target server, but it returned an error
-      console.error("Error! Autoupdate is broken. Report an error on github at https://github.com/rayyansaidi-com/app/issues/new (32)")
+      console.error('Error! Autoupdate is broken. Report an error on github at https://github.com/rayyansaidi-com/app/issues/new (32)')
     }
-  };
+  }
 
   request.onerror = function () {
     // There was a connection error of some sort
-    console.error("Error! Autoupdate is broken. Report an error on github at https://github.com/rayyansaidi-com/app/issues/new (38)")
-  };
-
-  request.send();
-}
-function darwinDialog() {
-  const updateDialog = dialog.showMessageBoxSync({
-    "buttons": [
-      "Update for macOS",  "I want to see the changes", "I don't want to update"
-    ],
-    "defaultId": 0,
-    "message": "There's an update for this app."
+    console.error('Error! Autoupdate is broken. Report an error on github at https://github.com/rayyansaidi-com/app/issues/new (38)')
   }
-  );
-  if (updateDialog == 0) {
+
+  request.send()
+}
+function darwinDialog () {
+  const updateDialog = dialog.showMessageBoxSync({
+    buttons: [
+      'Update for macOS', 'I want to see the changes', "I don't want to update"
+    ],
+    defaultId: 0,
+    message: "There's an update for this app."
+  }
+  )
+  if (updateDialog === 0) {
     shell.openExternal('https://github.com/rayyansaidi-com/app/releases/latest/download/rayyansaidi-desktop.dmg')
   }
-  if (updateDialog == 1) {
+  if (updateDialog === 1) {
     shell.openExternal('https://github.com/rayyansaidi-com/app/releases/latest')
   }
 }
-function linuxDialog() {
+function linuxDialog () {
   const updateDialog = dialog.showMessageBoxSync({
-    "buttons": [
-      "Update for Linux", "I want to see the changes", "I don't want to update"
+    buttons: [
+      'Update for Linux', 'I want to see the changes', "I don't want to update"
     ],
-    "defaultId": 0,
-    "message": "There's an update for this app."
+    defaultId: 0,
+    message: "There's an update for this app."
   }
-  );
-  if (updateDialog == 0) {
+  )
+  if (updateDialog === 0) {
     shell.openExternal('https://github.com/rayyansaidi-com/app/releases/latest/download/rayyansaidi-desktop.snap')
   }
-  if (updateDialog == 1) {
+  if (updateDialog === 1) {
     shell.openExternal('https://github.com/rayyansaidi-com/app/releases/latest')
   }
 }
-function win32Dialog() {
+function win32Dialog () {
   const updateDialog = dialog.showMessageBoxSync({
-    "buttons": [
-      "Update for Windows", "I want to see the changes", "I don't want to update"
+    buttons: [
+      'Update for Windows', 'I want to see the changes', "I don't want to update"
     ],
-    "defaultId": 0,
-    "message": "There's an update for this app."
+    defaultId: 0,
+    message: "There's an update for this app."
   }
-  );
-  if (updateDialog == 0) {
+  )
+  if (updateDialog === 0) {
     shell.openExternal('https://github.com/rayyansaidi-com/app/releases/latest/download/rayyansaidi-desktop.exe')
   }
-  if (updateDialog == 1) {
+  if (updateDialog === 1) {
     shell.openExternal('https://github.com/rayyansaidi-com/app/releases/latest')
   }
 }

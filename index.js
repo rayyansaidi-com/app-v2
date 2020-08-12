@@ -1,11 +1,10 @@
-const { app, BrowserWindow, nativeTheme, Menu, dialog } = require('electron');
-const shell = require('electron').shell;
-const electron = require('electron');
-const isOnline = require('is-online');
+const { app, BrowserWindow, nativeTheme, Menu, dialog } = require('electron')
+const shell = require('electron').shell
+const isOnline = require('is-online')
 // const server = 'https://hazel.mrsun10.vercel.app/'
 // const url = `${server}/update/${process.platform}/${app.getVersion()}`
-nativeTheme.themeSource = 'dark';
-function createWindow() {
+nativeTheme.themeSource = 'dark'
+function createWindow () {
   // Create the browser window.
   const win = new BrowserWindow({
     width: 800,
@@ -15,7 +14,7 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: true
     },
-    vibrancy: "sidebar",
+    vibrancy: 'sidebar'
   })
   // and load the index.html of the app.
   win.loadFile('src/index.html')
@@ -26,100 +25,100 @@ function createWindow() {
         {
           label: 'View Rayyansaidi Developer',
           accelerator: 'CmdOrCtrl+D',
-          click() {
-            createDeveloperWindow();
+          click () {
+            createDeveloperWindow()
           }
         },
         {
           label: 'Open DevTools',
           accelerator: 'CmdOrCtrl+Alt+I',
-          click() {
+          click () {
             win.webContents.openDevTools()
           }
         },
-        { type: "separator" },
+        { type: 'separator' },
         {
           label: 'Print',
           accelerator: 'CmdOrCtrl+P',
-          click() {
+          click () {
             win.webContents.print()
           }
         },
-        { type: "separator" },
+        { type: 'separator' },
         {
           label: 'Quit',
           accelerator: 'CmdOrCtrl+Q',
-          click() {
+          click () {
             app.quit()
           }
         }
       ]
     },
     {
-      label: "Edit",
+      label: 'Edit',
       submenu: [
-        { 
-          label: "Cut", 
-          accelerator: "CmdOrCtrl+X", 
-          selector: "cut:" 
-        },
-        { 
-          label: "Copy", 
-          accelerator: "CmdOrCtrl+C", 
-          selector: "copy:" 
-        },
-        { 
-          label: "Paste", 
-          accelerator: "CmdOrCtrl+V", 
-          selector: "paste:" 
-        },
-        { type: "separator" },
-        { 
-          label: "Select All",
-          accelerator: "CmdOrCtrl+A",
-          selector: "selectAll:" 
-        },
-        { type: "separator" },
         {
-          label: "Find",
-          accelerator: "CmdOrCtrl+A"
+          label: 'Cut',
+          accelerator: 'CmdOrCtrl+X',
+          selector: 'cut:'
+        },
+        {
+          label: 'Copy',
+          accelerator: 'CmdOrCtrl+C',
+          selector: 'copy:'
+        },
+        {
+          label: 'Paste',
+          accelerator: 'CmdOrCtrl+V',
+          selector: 'paste:'
+        },
+        { type: 'separator' },
+        {
+          label: 'Select All',
+          accelerator: 'CmdOrCtrl+A',
+          selector: 'selectAll:'
+        },
+        { type: 'separator' },
+        {
+          label: 'Find',
+          accelerator: 'CmdOrCtrl+A'
 
         }
       ]
     },
     {
-      label: "GitHub",
+      label: 'GitHub',
       submenu: [
         {
-          label: "View Source Code",
-          click() {
+          label: 'View Source Code',
+          click () {
             shell.openExternal('https://github.com/rayyansaidi-com/app')
           }
         },
-        { type: "separator" },
+        { type: 'separator' },
         {
-          label: "Report a Problem",
-          click() {
+          label: 'Report a Problem',
+          click () {
             shell.openExternal('https://github.com/rayyansaidi-com/app/issues/new')
           }
         },
-        { type: "separator" },
+        { type: 'separator' },
         {
-          label: "View the information (README.md)",
-          click() {
+          label: 'View the information (README.md)',
+          click () {
             shell.openExternal('https://github.com/rayyansaidi-com/app/blob/README.md')
           }
         },
         {
-          label: "View the current and future changelog (CHANGELOG.md)",
-          click() {
+          label: 'View the current and future changelog (CHANGELOG.md)',
+          click () {
             shell.openExternal('https://github.com/rayyansaidi-com/app/blob/master/CHANGELOG.md')
           }
-        },
+        }
       ]
     }
   ])
-  Menu.setApplicationMenu(menu);
+  Menu.setApplicationMenu(menu)
   // Open the DevTools.
   // win.webContents.openDevTools()
 }
@@ -140,18 +139,18 @@ app.on('activate', () => {
   }
 })
 
-const createDeveloperWindow = async () =>  {
-  await isOnline() ? 
-  new BrowserWindow({
-    width: 1200,
-    height: 600,
-    webPreferences: {
-      nodeIntegration: true
-    }
-  }).loadURL('https://developer.rayyansaidi.com/')
-   : dialog.showMessageBox({
-    "message": "Please turn on wifi to see Rayyansaidi Developer"
-   })
+const createDeveloperWindow = async () => {
+  await isOnline()
+    ? new BrowserWindow({
+      width: 1200,
+      height: 600,
+      webPreferences: {
+        nodeIntegration: true
+      }
+    }).loadURL('https://developer.rayyansaidi.com/')
+    : dialog.showMessageBox({
+      message: 'Please turn on wifi to see Rayyansaidi Developer'
+    })
 }
 
 // In this file you can include the rest of your app's specific main process
