@@ -639,17 +639,9 @@
     <div id="canvas"></div>
     <!--Scripts-->
     <script>
-      require("./renderer.js");
+      require('bootstrap');
+      require("./renderer.js")
+      require("./function.js")
     </script>
-    <script src="function.js"></script>
-    <script>
-      window.nodeRequire = require;
-      delete window.require;
-      delete window.exports;
-      delete window.module;
-    </script>
-    <script src="../node_modules/jquery/dist/jquery.slim.js"></script>
-    <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   </body>
 </html>
