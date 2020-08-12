@@ -142,16 +142,16 @@ app.on('activate', () => {
   }
 })
 
-function readSettings() {
-fs.access(settingsPath, (err) => {
-  if (err) {
-    fs.writeFile(settingsPath, JSON.stringify({"askToUpdate":true}), (err) => {
-      if (err) {
-        throw err;
-      }
-    })
-  }
-});
+function readSettings () {
+  fs.access(settingsPath, (err) => {
+    if (err) {
+      fs.writeFile(settingsPath, JSON.stringify({ askToUpdate: true }), (err) => {
+        if (err) {
+          throw err
+        }
+      })
+    }
+  })
 };
 
 const createDeveloperWindow = async () => {
@@ -170,4 +170,4 @@ const createDeveloperWindow = async () => {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
-readSettings();
+readSettings()
