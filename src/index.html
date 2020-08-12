@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rayyansaidi Desktop</title>
     <link href="fonts/fonts.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../node_modules/bootswatch/dist/darkly/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -518,12 +518,11 @@
     <div id="canvas"></div>
     <!--Scripts-->
     <script>require('./renderer.js')</script>
+    <script src="function.js"></script>
     <script>window.nodeRequire = require; delete window.require; delete window.exports; delete window.module;</script>
-    <script src="js/jquery-3.5.1.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/html2canvas.min.js"></script>
-    <script src="js/function.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.slim.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
