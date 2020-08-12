@@ -9,6 +9,13 @@ var bb = document.getElementById('birthday')
 var cc = document.getElementById('father')
 var dd = document.getElementById('mom')
 var ee = document.getElementById('val')
+var ff = document.getElementById('homeLink')
+var gg = document.getElementById('treasureLink')
+var hh = document.getElementById('holidayLink')
+var ii = document.getElementById('birthdayLink')
+var jj = document.getElementById('fatherLink')
+var kk = document.getElementById('motherLink')
+var ll = document.getElementById('valentineLink')
 // Treasure Hunt Varibles
 var score = 0
 var s = document.getElementById('scorebord')
@@ -19,7 +26,7 @@ var sBtn = document.getElementById('screenshot')
 y.style.display = 'none'
 a.style.display = 'none'
 b.style.display = 'none'
-function Rayyansaidi () {
+ff.addEventListener('click', () => {
   x.style.display = 'block'
   y.style.display = 'none'
   z.style.display = 'block'
@@ -28,8 +35,8 @@ function Rayyansaidi () {
   document.getElementById('play').style.display = 'none'
   b.style.display = 'none'
   sBtn.style.display = 'none'
-}
-function Treasure () {
+})
+gg.addEventListener('click', () => {
   x.style.display = 'none'
   y.style.display = 'block'
   z.style.display = 'none'
@@ -38,9 +45,9 @@ function Treasure () {
   a.style.display = 'none'
   b.style.display = 'none'
   sBtn.style.display = 'none'
-}
+})
 // Holiday Templates
-function holiday () {
+hh.addEventListener('click', () => {
   a.style.display = 'block'
   x.style.display = 'none'
   y.style.display = 'none'
@@ -54,8 +61,8 @@ function holiday () {
   document.getElementById('table').style.display = 'none'
   document.getElementById('play').style.display = 'none'
   sBtn.style.display = 'none'
-}
-function Birthday () {
+})
+ii.addEventListener('click', () => {
   aa.style.display = 'none'
   bb.style.display = 'block'
   cc.style.display = 'none'
@@ -80,8 +87,8 @@ function Birthday () {
       document.getElementById('screenshot-output').removeAttribute('disabled')
     })
   })
-}
-function Father () {
+})
+jj.addEventListener('click', () => {
   aa.style.display = 'none'
   bb.style.display = 'none'
   cc.style.display = 'block'
@@ -106,8 +113,8 @@ function Father () {
       document.getElementById('screenshot-output').removeAttribute('disabled')
     })
   })
-}
-function Mom () {
+})
+kk.addEventListener('click', () => {
   aa.style.display = 'none'
   bb.style.display = 'none'
   cc.style.display = 'none'
@@ -132,8 +139,8 @@ function Mom () {
       document.getElementById('screenshot-output').removeAttribute('disabled')
     })
   })
-}
-function Val () {
+})
+ll.addEventListener('click', () => {
   aa.style.display = 'none'
   bb.style.display = 'none'
   cc.style.display = 'none'
@@ -158,7 +165,7 @@ function Val () {
       document.getElementById('screenshot-output').removeAttribute('disabled')
     })
   })
-}
+})
 // Treasure Hunt
 function Uhall () {
   var width = Math.floor(Math.random() * 10) + 1
