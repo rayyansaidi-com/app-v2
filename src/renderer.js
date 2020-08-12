@@ -11,7 +11,11 @@ if (settings.askToUpdate !== false) {
 }
 function autoUpdate () {
   var request = new XMLHttpRequest()
-  request.open('GET', 'https://api.github.com/repositories/275879561/releases', true)
+  request.open(
+    'GET',
+    'https://api.github.com/repositories/275879561/releases',
+    true
+  )
   request.onload = function () {
     if (this.status >= 200 && this.status < 400) {
       // Success!
@@ -34,13 +38,17 @@ function autoUpdate () {
       // }
     } else {
       // We reached our target server, but it returned an error
-      console.error('Error! Autoupdate is broken. Report an error on github at https://github.com/rayyansaidi-com/app/issues/new?assignees=Ryyn-Sd&labels=bug&template=bug_report.md&title=%5BBug%5D (32)')
+      console.error(
+        'Error! Autoupdate is broken. Report an error on github at https://github.com/rayyansaidi-com/app/issues/new?assignees=Ryyn-Sd&labels=bug&template=bug_report.md&title=%5BBug%5D (32)'
+      )
     }
   }
 
   request.onerror = () => {
     // There was a connection error of some sort
-    console.error('Error! Autoupdate is broken. Report an error on github at https://github.com/rayyansaidi-com/app/issues/new?assignees=Ryyn-Sd&labels=bug&template=bug_report.md&title=%5BBug%5D (38)')
+    console.error(
+      'Error! Autoupdate is broken. Report an error on github at https://github.com/rayyansaidi-com/app/issues/new?assignees=Ryyn-Sd&labels=bug&template=bug_report.md&title=%5BBug%5D (38)'
+    )
   }
 
   request.send()
@@ -48,17 +56,23 @@ function autoUpdate () {
 function darwinDialog () {
   const updateDialog = dialog.showMessageBoxSync({
     buttons: [
-      'Update for macOS', 'I want to see the changes', "I don't want to update", 'Never ask me again'
+      'Update for macOS',
+      'I want to see the changes',
+      "I don't want to update",
+      'Never ask me again'
     ],
     defaultId: 0,
     message: "There's an update for this app."
-  }
-  )
+  })
   if (updateDialog === 0) {
-    shell.openExternal('https://github.com/rayyansaidi-com/app/releases/latest/download/rayyansaidi-desktop.dmg')
+    shell.openExternal(
+      'https://github.com/rayyansaidi-com/app/releases/latest/download/rayyansaidi-desktop.dmg'
+    )
   }
   if (updateDialog === 1) {
-    shell.openExternal('https://github.com/rayyansaidi-com/app/releases/latest')
+    shell.openExternal(
+      'https://github.com/rayyansaidi-com/app/releases/latest'
+    )
   }
   if (updateDialog === 3) {
     fs.readFile(settingsPath, (err, data) => {
@@ -78,17 +92,23 @@ function darwinDialog () {
 function linuxDialog () {
   const updateDialog = dialog.showMessageBoxSync({
     buttons: [
-      'Update for Linux', 'I want to see the changes', "I don't want to update", 'Never ask me again'
+      'Update for Linux',
+      'I want to see the changes',
+      "I don't want to update",
+      'Never ask me again'
     ],
     defaultId: 0,
     message: "There's an update for this app."
-  }
-  )
+  })
   if (updateDialog === 0) {
-    shell.openExternal('https://github.com/rayyansaidi-com/app/releases/latest/download/rayyansaidi-desktop.snap')
+    shell.openExternal(
+      'https://github.com/rayyansaidi-com/app/releases/latest/download/rayyansaidi-desktop.snap'
+    )
   }
   if (updateDialog === 1) {
-    shell.openExternal('https://github.com/rayyansaidi-com/app/releases/latest')
+    shell.openExternal(
+      'https://github.com/rayyansaidi-com/app/releases/latest'
+    )
   }
   if (updateDialog === 3) {
     fs.readFile(settingsPath, (err, data) => {
@@ -108,17 +128,23 @@ function linuxDialog () {
 function win32Dialog () {
   const updateDialog = dialog.showMessageBoxSync({
     buttons: [
-      'Update for Windows', 'I want to see the changes', "I don't want to update", 'Never ask me again'
+      'Update for Windows',
+      'I want to see the changes',
+      "I don't want to update",
+      'Never ask me again'
     ],
     defaultId: 0,
     message: "There's an update for this app."
-  }
-  )
+  })
   if (updateDialog === 0) {
-    shell.openExternal('https://github.com/rayyansaidi-com/app/releases/latest/download/rayyansaidi-desktop.exe')
+    shell.openExternal(
+      'https://github.com/rayyansaidi-com/app/releases/latest/download/rayyansaidi-desktop.exe'
+    )
   }
   if (updateDialog === 1) {
-    shell.openExternal('https://github.com/rayyansaidi-com/app/releases/latest')
+    shell.openExternal(
+      'https://github.com/rayyansaidi-com/app/releases/latest'
+    )
   }
   if (updateDialog === 3) {
     fs.readFile(settingsPath, (err, data) => {

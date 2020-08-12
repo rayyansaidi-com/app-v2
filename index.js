@@ -85,7 +85,6 @@ function createWindow () {
         {
           label: 'Find',
           accelerator: 'CmdOrCtrl+A'
-
         }
       ]
     },
@@ -102,20 +101,26 @@ function createWindow () {
         {
           label: 'Report a Problem',
           click () {
-            shell.openExternal('https://github.com/rayyansaidi-com/app/issues/new')
+            shell.openExternal(
+              'https://github.com/rayyansaidi-com/app/issues/new'
+            )
           }
         },
         { type: 'separator' },
         {
           label: 'View the information (README.md)',
           click () {
-            shell.openExternal('https://github.com/rayyansaidi-com/app/blob/README.md')
+            shell.openExternal(
+              'https://github.com/rayyansaidi-com/app/blob/README.md'
+            )
           }
         },
         {
           label: 'View the current and future changelog (CHANGELOG.md)',
           click () {
-            shell.openExternal('https://github.com/rayyansaidi-com/app/blob/master/CHANGELOG.md')
+            shell.openExternal(
+              'https://github.com/rayyansaidi-com/app/blob/master/CHANGELOG.md'
+            )
           }
         }
       ]
@@ -145,17 +150,21 @@ app.on('activate', () => {
 function readSettings () {
   fs.access(settingsPath, (err) => {
     if (err) {
-      fs.writeFile(settingsPath, JSON.stringify({ askToUpdate: true }), (err) => {
-        if (err) {
-          throw err
+      fs.writeFile(
+        settingsPath,
+        JSON.stringify({ askToUpdate: true }),
+        (err) => {
+          if (err) {
+            throw err
+          }
         }
-      })
+      )
     }
   })
-};
+}
 
 const createDeveloperWindow = async () => {
-  await isOnline()
+  (await isOnline())
     ? new BrowserWindow({
       width: 1200,
       height: 600,
