@@ -1,6 +1,9 @@
 const { app, BrowserWindow, nativeTheme, Menu, dialog } = require('electron')
 const shell = require('electron').shell
 const isOnline = require('is-online')
+const fs = require('fs')
+const path = require('path')
+const settingsPath = path.join(app.getAppPath('userData'), 'settings.json')
 // const server = 'https://hazel.mrsun10.vercel.app/'
 // const url = `${server}/update/${process.platform}/${app.getVersion()}`
 nativeTheme.themeSource = 'dark'
@@ -139,6 +142,18 @@ app.on('activate', () => {
   }
 })
 
+function readSettings() {
+fs.access(settingsPath, (err) => {
+  if (err) {
+    fs.writeFile(settingsPath, JSON.stringify({"askToUpdate":true}), (err) => {
+      if (err) {
+        throw err;
+      }
+    })
+  }
+});
+};
+
 const createDeveloperWindow = async () => {
   await isOnline()
     ? new BrowserWindow({
@@ -155,3 +170,4 @@ const createDeveloperWindow = async () => {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+readSettings();
