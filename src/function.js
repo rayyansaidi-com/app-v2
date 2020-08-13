@@ -9,14 +9,7 @@ var bb = document.getElementById('birthday')
 var cc = document.getElementById('father')
 var dd = document.getElementById('mom')
 var ee = document.getElementById('val')
-var ff = document.getElementById('homeLink')
-var gg = document.getElementById('treasureLink')
-var hh = document.getElementById('holidayLink')
-var ii = document.getElementById('birthdayLink')
-var jj = document.getElementById('fatherLink')
-var kk = document.getElementById('motherLink')
-var ll = document.getElementById('valentineLink')
-var mm = document.getElementById('Uhall')
+
 // Treasure Hunt Varibles
 var score = 0
 var s = document.getElementById('scorebord')
@@ -27,7 +20,7 @@ var sBtn = document.getElementById('screenshot')
 y.style.display = 'none'
 a.style.display = 'none'
 b.style.display = 'none'
-ff.addEventListener('click', () => {
+document.getElementById('homeLink').addEventListener('click', () => {
   x.style.display = 'block'
   y.style.display = 'none'
   z.style.display = 'block'
@@ -37,7 +30,7 @@ ff.addEventListener('click', () => {
   b.style.display = 'none'
   sBtn.style.display = 'none'
 })
-gg.addEventListener('click', () => {
+document.getElementById('treasureLink').addEventListener('click', () => {
   x.style.display = 'none'
   y.style.display = 'block'
   z.style.display = 'none'
@@ -48,7 +41,7 @@ gg.addEventListener('click', () => {
   sBtn.style.display = 'none'
 })
 // Holiday Templates
-hh.addEventListener('click', () => {
+document.getElementById('holidayLink').addEventListener('click', () => {
   a.style.display = 'block'
   x.style.display = 'none'
   y.style.display = 'none'
@@ -63,7 +56,7 @@ hh.addEventListener('click', () => {
   document.getElementById('play').style.display = 'none'
   sBtn.style.display = 'none'
 })
-ii.addEventListener('click', () => {
+document.getElementById('birthdayLink').addEventListener('click', () => {
   aa.style.display = 'none'
   bb.style.display = 'block'
   cc.style.display = 'none'
@@ -89,7 +82,7 @@ ii.addEventListener('click', () => {
     })
   })
 })
-jj.addEventListener('click', () => {
+document.getElementById('fatherLink').addEventListener('click', () => {
   aa.style.display = 'none'
   bb.style.display = 'none'
   cc.style.display = 'block'
@@ -115,7 +108,7 @@ jj.addEventListener('click', () => {
     })
   })
 })
-kk.addEventListener('click', () => {
+document.getElementById('motherLink').addEventListener('click', () => {
   aa.style.display = 'none'
   bb.style.display = 'none'
   cc.style.display = 'none'
@@ -141,7 +134,7 @@ kk.addEventListener('click', () => {
     })
   })
 })
-ll.addEventListener('click', () => {
+document.getElementById('valentineLink').addEventListener('click', () => {
   aa.style.display = 'none'
   bb.style.display = 'none'
   cc.style.display = 'none'
@@ -168,7 +161,7 @@ ll.addEventListener('click', () => {
   })
 })
 // Treasure Hunt
-mm.addEventListener('click', () => {
+document.getElementById('uhall').addEventListener('click', () => {
   var width = Math.floor(Math.random() * 10) + 1
   var hight = Math.floor(Math.random() * 31) + 1
   w.innerHTML = ''
@@ -206,7 +199,7 @@ document.getElementById('kitchen').addEventListener('click', () => {
   }
 })
 
-function Dhall () {
+document.getElementById('dhall').addEventListener('click', () => {
   var width = Math.floor(Math.random() * 10) + 1
   var hight = Math.floor(Math.random() * 31) + 1
   w.innerHTML = ''
@@ -220,8 +213,8 @@ function Dhall () {
   } else {
     alert('Error Code 1')
   }
-}
-function Monster () {
+})
+document.getElementById('monster').addEventListener('click', () => {
   var width = Math.floor(Math.random() * 10) + 1
   var hight = Math.floor(Math.random() * 31) + 1
   w.innerHTML = ''
@@ -235,8 +228,8 @@ function Monster () {
   } else {
     alert('Error Code 1')
   }
-}
-function Play () {
+})
+document.getElementById('playroom').addEventListener('click', () => {
   var width = Math.floor(Math.random() * 10) + 1
   var hight = Math.floor(Math.random() * 31) + 1
   w.innerHTML = ''
@@ -250,22 +243,22 @@ function Play () {
   } else {
     alert('Error Code 1')
   }
-}
-function restart () {
+})
+document.getElementById('none').addEventListener('click', () => {
   score = 0
   s.innerHTML = score
-}
-function none () {
+})
+document.getElementById('none').addEventListener('click', () => {
   document.getElementById('table').style.display = 'none'
   document.getElementById('play').style.display = 'none'
   p.style.display = 'block'
   p.style.margin = '0 auto'
-}
-function play () {
+})
+document.getElementById('playbtn').addEventListener('click', () => {
   document.getElementById('table').style.display = 'grid'
   document.getElementById('play').style.display = 'block'
   p.style.display = 'none'
-}
+})
 // Modal
 // Get the modal
 var modal = document.getElementById('myModal')
@@ -277,18 +270,18 @@ var btn = document.getElementById('myBtn')
 var span = document.getElementsByClassName('close')[0]
 
 // When the user clicks the button, open the modal
-btn.onclick = function () {
+btn.addEventListener('click', () => {
   modal.style.display = 'block'
-}
+})
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function () {
+span.addEventListener('click', () => {
   modal.style.display = 'none'
-}
+})
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
+window.addEventListener('click', (event) => {
   if (event.target === modal) {
     modal.style.display = 'none'
   }
-}
+})
