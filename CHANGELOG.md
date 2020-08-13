@@ -11,11 +11,11 @@
 
 ### Completed Changes:
 
-- There is a min width and min height, and holiday templates will stop showing when the width is 576 px
+- There is a min width and min height to solve the sidebar text getting smaller issue
+- Holiday templates will stop showing when the sidebar stops showing, which is at 768 pixels
 - Rayyansaidi Developer is also on the app
+- There will be a never ask me again button in the auto-updater
 
 ### Changes I'm working on:
 
 - The screenshot button will be improved. As soon as you hit the take a screenshot button, it will automatically ask you to print it
-- There will be a never ask me again button in the auto-updater
-- I will use [react](https://reactjs.com/) in the app, and that will cause me to add MORE features, and MORE content!tent!
