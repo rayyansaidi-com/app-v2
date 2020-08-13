@@ -209,19 +209,7 @@ input {
     display: block !important;
   }
   #holiday {
-    display: block !important;
-  }
-  #birthday {
-    display: block !important;
-  }
-  #mom {
-    display: block !important;
-  }
-  #father {
-    display: block !important;
-  }
-  #val {
-    display: block !important;
+    display: none !important;
   }
   img {
     margin: 0 auto;
@@ -241,11 +229,5 @@ input {
   }
   body {
     text-align: center;
-  }
-}
-
-@media (max-width: 610px) {
-  #holiday {
-    display: none !important;
   }
 }
