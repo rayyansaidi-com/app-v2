@@ -196,6 +196,24 @@ input {
   display: none;
 }
 
+.primary {
+  color: #375a7f;
+}
+
+.success {
+  color: #00bc8c;
+}
+
+.danger {
+  color: #e74c3c;
+}
+
+.warning {
+  color: #f39c12;
+}
+
+.border-purple{border-color:#6f42c1!important;}
+
 /* @media */
 
 @media (max-width: 768px) {
@@ -229,5 +247,8 @@ input {
   }
   body {
     text-align: center;
+  }
+  #screenshot {
+    display: none!important;
   }
 }
