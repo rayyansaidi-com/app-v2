@@ -183,7 +183,7 @@ mm.addEventListener('click', () => {
     alert('Error Code 1')
   }
 })
-function Kitchen () {
+document.getElementById('kitchen').addEventListener('click', () => {
   var width = Math.floor(Math.random() * 10) + 1
   var hight = Math.floor(Math.random() * 31) + 1
   w.innerHTML = ''
@@ -204,7 +204,8 @@ function Kitchen () {
   } else {
     alert('Error Code 1')
   }
-}
+})
+
 function Dhall () {
   var width = Math.floor(Math.random() * 10) + 1
   var hight = Math.floor(Math.random() * 31) + 1
