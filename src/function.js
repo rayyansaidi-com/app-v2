@@ -16,6 +16,7 @@ var ii = document.getElementById('birthdayLink')
 var jj = document.getElementById('fatherLink')
 var kk = document.getElementById('motherLink')
 var ll = document.getElementById('valentineLink')
+var mm = document.getElementById('Uhall')
 // Treasure Hunt Varibles
 var score = 0
 var s = document.getElementById('scorebord')
@@ -167,7 +168,7 @@ ll.addEventListener('click', () => {
   })
 })
 // Treasure Hunt
-function Uhall () {
+mm.addEventListener('click', () => {
   var width = Math.floor(Math.random() * 10) + 1
   var hight = Math.floor(Math.random() * 31) + 1
   w.innerHTML = ''
@@ -181,7 +182,7 @@ function Uhall () {
   } else {
     alert('Error Code 1')
   }
-}
+})
 function Kitchen () {
   var width = Math.floor(Math.random() * 10) + 1
   var hight = Math.floor(Math.random() * 31) + 1
