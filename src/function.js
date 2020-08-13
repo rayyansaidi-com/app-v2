@@ -166,7 +166,7 @@ document.getElementById('uhall').addEventListener('click', () => {
   var hight = Math.floor(Math.random() * 31) + 1
   w.innerHTML = ''
   if (width < 8 && hight < 13) {
-    score += 1
+    score += 100
     s.innerHTML = score
   } else if (width > 7 || hight > 12) {
     w.innerHTML = 'Incorect. Game over.'
@@ -181,10 +181,10 @@ document.getElementById('kitchen').addEventListener('click', () => {
   var hight = Math.floor(Math.random() * 31) + 1
   w.innerHTML = ''
   if (width < 5 && hight > 12) {
-    score += 1
+    score += 100
     s.innerHTML = score
   } else if (width < 7 && hight > 18) {
-    score += 1
+    score += 100
     s.innerHTML = score
   } else if (hight > 13 || width < 6) {
     w.innerHTML = 'Incorect. Game over.'
@@ -204,7 +204,7 @@ document.getElementById('dhall').addEventListener('click', () => {
   var hight = Math.floor(Math.random() * 31) + 1
   w.innerHTML = ''
   if (width < 6 && hight > 12) {
-    score += 1
+    score += 100
     s.innerHTML = score
   } else if (width > 5 || hight < 13) {
     w.innerHTML = 'Incorect. Game over.'
@@ -219,7 +219,7 @@ document.getElementById('monster').addEventListener('click', () => {
   var hight = Math.floor(Math.random() * 31) + 1
   w.innerHTML = ''
   if (width > 7 && hight < 13) {
-    score += 1
+    score += 100
     s.innerHTML = score
   } else if (width < 8 || hight > 12) {
     w.innerHTML = 'Incorect. Game over.'
@@ -234,7 +234,7 @@ document.getElementById('playroom').addEventListener('click', () => {
   var hight = Math.floor(Math.random() * 31) + 1
   w.innerHTML = ''
   if (width > 7 && hight > 13 < 19) {
-    score += 1
+    score += 100
     s.innerHTML = score
   } else if (width < 8 || hight < 14 < 18) {
     w.innerHTML = 'Incorect. Game over.'
