@@ -10,7 +10,5 @@ module.exports = {
     ecmaVersion: 11
   },
   ignorePatterns: ['**/*.min.js', '**/node_modules/**/*.js'],
-  rules: {
-    'no-unused-vars': 1
-  }
+  rules: {}
 }
