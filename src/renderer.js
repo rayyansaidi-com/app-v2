@@ -58,7 +58,7 @@ function darwinDialog () {
     buttons: [
       'Update for macOS',
       'I want to see the changes',
-      "I don't want to update",
+      'Maybe later',
       'Never ask me again'
     ],
     defaultId: 0,
@@ -94,7 +94,7 @@ function linuxDialog () {
     buttons: [
       'Update for Linux',
       'I want to see the changes',
-      "I don't want to update",
+      'Maybe later',
       'Never ask me again'
     ],
     defaultId: 0,
@@ -130,7 +130,7 @@ function win32Dialog () {
     buttons: [
       'Update for Windows',
       'I want to see the changes',
-      "I don't want to update",
+      'Maybe later',
       'Never ask me again'
     ],
     defaultId: 0,
