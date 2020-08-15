@@ -18,28 +18,28 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
-    - name: Setup Node
-      uses: actions/setup-node@v1
-      with:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
           node-version: 12.18.3
-          
-    # Install things needed
-    - name: Install
-      run: yarn
 
-    # Use prettier
-    - name: Use prettier
-      run: yarn prettier --write
-    # Fix esLint
-    - name: Fix ESLint
-      run: yarn eslint --fix
-    # Push to GitHub
-    - name: Push to GitHub
-      run: |
-        git config user.name "github-actions[bot]"
-        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git add -A
-        git commit -m "Chore: Prettier" 2>&1
-        git push https://github-actions[bot]:${{ secrets.GITHUB_TOKEN }}@github.com/rayyansaidi-com/app.git master
+      # Install things needed
+      - name: Install
+        run: yarn
+
+      # Use prettier
+      - name: Use prettier
+        run: yarn prettier --write
+      # Fix esLint
+      - name: Fix ESLint
+        run: yarn eslint --fix
+      # Push to GitHub
+      - name: Push to GitHub
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Chore: Prettier" 2>&1
+          git push https://github-actions[bot]:${{ secrets.GITHUB_TOKEN }}@github.com/rayyansaidi-com/app.git master

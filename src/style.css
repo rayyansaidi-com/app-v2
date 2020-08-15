@@ -212,7 +212,9 @@ input {
   color: #f39c12;
 }
 
-.border-purple{border-color:#6f42c1!important;}
+.border-purple {
+  border-color: #6f42c1 !important;
+}
 
 /* @media */
 
@@ -249,6 +251,6 @@ input {
     text-align: center;
   }
   #screenshot {
-    display: none!important;
+    display: none !important;
   }
 }
