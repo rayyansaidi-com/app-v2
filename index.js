@@ -191,8 +191,7 @@ function prefercesWindow () {
     minHeight: 200,
     webPreferences: {
       nodeIntegration: true
-    },
-    vibrancy: 'sidebar'
+    }
   })
   prefwin.loadFile('src/prefrencess.html')
 }

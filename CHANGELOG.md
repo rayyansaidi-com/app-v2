@@ -16,10 +16,11 @@
 - Rayyansaidi Developer is also on the app
 - There will be a never ask me again button in the auto-updater
 
-### Last change that I need to do:
+### Last changes that I need to do:
 
-The screenshot button will be improved. As soon as you hit the take a screenshot button, it will automatically ask you to print it
+- The screenshot button will be improved. As soon as you hit the take a screenshot button, it will automatically ask you to print it
+- There will be a prefrencess window
 
 ### A Change I decided not to do
 
-I decided to not use [react](https://reactjs.com/) in the app because that means a slower app, and I can do evreything without it.
+I decided to not use [react](https://reactjs.com/) in the app because that means a slower app, and I can do evreything I can with it without it also
