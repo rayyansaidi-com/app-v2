@@ -33,6 +33,13 @@ function createWindow () {
           }
         },
         {
+          label: 'Preferences',
+          accelerator: 'CmdOrCtrl+,',
+          click () {
+            prefercesWindow()
+          }
+        },
+        {
           label: 'Open DevTools',
           accelerator: 'CmdOrCtrl+Alt+I',
           click () {
@@ -175,6 +182,19 @@ const createDeveloperWindow = async () => {
     : dialog.showMessageBox({
       message: 'Please turn on wifi to see Rayyansaidi Developer'
     })
+}
+function prefercesWindow () {
+  const prefwin = new BrowserWindow({
+    width: 500,
+    height: 400,
+    minWidth: 300,
+    minHeight: 200,
+    webPreferences: {
+      nodeIntegration: true
+    },
+    vibrancy: 'sidebar'
+  })
+  prefwin.loadFile('src/prefrencess.html')
 }
 
 // In this file you can include the rest of your app's specific main process
