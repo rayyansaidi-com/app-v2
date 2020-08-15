@@ -20,6 +20,7 @@
 
 - The screenshot button will be improved. As soon as you hit the take a screenshot button, it will automatically ask you to print it
 - There will be a prefrencess window
+- You can see what is comming next with Rayyansaidi Desktop Beta
 
 ### A Change I decided not to do
 
