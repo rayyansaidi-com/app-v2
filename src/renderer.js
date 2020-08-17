@@ -1,3 +1,4 @@
+'use strict'
 const semverGt = require('semver/functions/gt')
 const appVersion = require('electron').remote.app.getVersion()
 const { app, dialog, shell } = require('electron').remote

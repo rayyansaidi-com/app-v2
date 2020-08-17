@@ -1,3 +1,4 @@
+'use strict'
 const html2canvas = require('html2canvas')
 var x = document.getElementById('rayyansaidi')
 var y = document.getElementById('treasure')
