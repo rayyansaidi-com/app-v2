@@ -6,5 +6,6 @@ Installing is simple. All you need to do is run this command in the MacOS, or Li
 <br><br>
 <pre><code>curl -o -l https://rayyansaidi.com/app/install.sh | bash </code></pre>
 
-To update, run the exact same command again
+To update, run the exact same command again.
+<br>
 If you are on linux, you may be asked for your password
