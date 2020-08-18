@@ -1,7 +1,10 @@
 'use strict'
 const fs = require('fs')
 const { app } = require('electron')
-const settingsPath = require('path').join(app.getAppPath('userData'), 'settings.json')
+const settingsPath = require('path').join(
+  app.getAppPath('userData'),
+  'settings.json'
+)
 function addSettings (preference, value) {
   fs.readFile(settingsPath, (err, data) => {
     if (err) {
@@ -21,7 +24,7 @@ document.getElementById('AutoUpdaterSaveBtn').addEventListener('click', () => {
     addSettings('showNeverAsk', true)
   } else {
     addSettings('showNeverAsk', false)
-  };
+  }
 
   if (document.getElementById('seeChangesCheckbox').checked) {
     addSettings('showSeeChanges', true)
