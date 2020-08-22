@@ -1,4 +1,7 @@
 'use strict'
+/* eslint no-constant-condition: "off"
+   ----------------------------------------
+   eslint gets mad at lines 14-26 otherwise */
 const semverGt = require('semver/functions/gt')
 const appVersion = require('electron').remote.app.getVersion()
 const { app, dialog, shell } = require('electron').remote
@@ -7,6 +10,21 @@ const fs = require('fs')
 const path = require('path')
 const settingsPath = path.join(app.getAppPath('userData'), 'settings.json')
 const settings = require(settingsPath)
+const preferences = JSON.parse(fs.readFileSync(settingsPath))
+var buttons = []
+if (preferences.showUpdate === true) {
+  buttons[buttons.length = 0 ? 0 : buttons.length + 1] = 'Update' + ((os === 'darwin') ? 'for macOS' : ((os === 'linux') ? 'for Linux' : ((os === 'win32') ? 'for Windows' : '')))
+}
+if (preferences.showMaybeLater === true) {
+  buttons[this.length = 0 ? 0 : this.length + 1] = 'Maybe Later'
+}
+if (preferences.showSeeChanges === true) {
+  buttons[this.length = 0 ? 0 : this.length + 1] = 'See changes'
+}
+if (preferences.showNeverAsk === true) {
+  buttons[this.length = 0 ? 0 : this.length + 1] = 'Never ask'
+}
+
 if (settings.askToUpdate !== false) {
   autoUpdate()
 }
@@ -56,12 +74,7 @@ function autoUpdate () {
 }
 function darwinDialog () {
   const updateDialog = dialog.showMessageBoxSync({
-    buttons: [
-      'Update for macOS',
-      'I want to see the changes',
-      'Maybe later',
-      'Never ask me again'
-    ],
+    buttons: buttons,
     defaultId: 0,
     message: "There's an update for this app."
   })
@@ -92,12 +105,7 @@ function darwinDialog () {
 }
 function linuxDialog () {
   const updateDialog = dialog.showMessageBoxSync({
-    buttons: [
-      'Update for Linux',
-      'I want to see the changes',
-      'Maybe later',
-      'Never ask me again'
-    ],
+    buttons: buttons,
     defaultId: 0,
     message: "There's an update for this app."
   })
@@ -128,12 +136,7 @@ function linuxDialog () {
 }
 function win32Dialog () {
   const updateDialog = dialog.showMessageBoxSync({
-    buttons: [
-      'Update for Windows',
-      'I want to see the changes',
-      'Maybe later',
-      'Never ask me again'
-    ],
+    buttons: buttons,
     defaultId: 0,
     message: "There's an update for this app."
   })
