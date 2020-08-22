@@ -4,8 +4,7 @@
 <br>
 Installing is simple. All you need to do is run these command in the MacOS, or Linux terminal:
 <br><br>
-<pre><code>curl https://rayyansaidi.com/app/install.sh | bash
-</code></pre>
+<pre><code>curl https://rayyansaidi.com/app/install.sh | bash</code></pre>
 
 To update, run the exact same command again.
 

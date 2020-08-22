@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download</title>
+</head>
+<body>
+    <script>
+        const os = navigator.platform;
+        if (os.startsWith("Mac")) {
+            window.location = 'https://github.com/rayyansaidi-com/app/blob/master/build/latest/rayyansaidi-desktop.dmg?raw=true';
+        } else if (os.startsWith("Linux")) {
+            window.location = 'https://github.com/rayyansaidi-com/app/blob/master/build/latest/rayyansaidi-desktop.snap?raw=true';
+        } else if (os.startsWith("win")) {
+            alert('Sorry. Beta is not available on windows');
+        } else {
+            alert('You might be using a diffrent OS then Mac, linux, or windows. If you are not, report an issue at https://github.com/rayyansaidi.com/app/issues');
+        }
+    </script>
+</body>
+</html>
