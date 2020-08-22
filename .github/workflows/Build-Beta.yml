@@ -60,7 +60,7 @@ jobs:
       - name: Commit
         run: |
           git pull origin HEAD
-          \cp dist/*.dmg build/latest/rayyansaidi-desktop.dmg
+          cp dist/*.dmg build/latest/rayyansaidi-desktop.dmg
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add build/latest
