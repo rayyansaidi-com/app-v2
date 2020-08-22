@@ -32,11 +32,11 @@ jobs:
       - name: Commit
         run: |
           git pull origin HEAD
-          \cp dist/*.snap build/latest/rayyansaidi-desktop.snap
+          \cp dist/*.exe build/latest/rayyansaidi-desktop.exe
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add build/latest
-          git commit -m "Add latest build (Linux, .snap)"
+          git commit -m "Add latest build (Windows, .exe)"
           git push https://github-actions[bot]:${{ secrets.GITHUB_TOKEN }}@github.com/rayyansaidi-com/app.git HEAD
   Windows:
     # The type of runner that the job will run on
