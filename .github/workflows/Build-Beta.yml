@@ -38,34 +38,34 @@ jobs:
           git add build/latest
           git commit -m "Add latest build (Linux, .snap)"
           git push https://github-actions[bot]:${{ secrets.GITHUB_TOKEN }}@github.com/rayyansaidi-com/app.git HEAD
-  Windows:
-    # The type of runner that the job will run on
-    runs-on: windows-latest
+  # Windows:
+  #   # The type of runner that the job will run on
+  #   runs-on: windows-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-      - name: Setup
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12.18.3
+  #   # Steps represent a sequence of tasks that will be executed as part of the job
+  #   steps:
+  #     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+  #     - uses: actions/checkout@v2
+  #     - name: Setup
+  #       uses: actions/setup-node@v1
+  #       with:
+  #         node-version: 12.18.3
 
-      - name: Install
-        run: yarn install
-      # Runs a single command using the runners shell
-      - name: Build
-        run: yarn build -p never
-      # Runs a set of commands using the runners shell
-      - name: Commit
-        run: |
-          git pull origin HEAD
-          cp dist/*.exe build/latest/rayyansaidi-desktop.exe
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add build/latest
-          git commit -m "Add latest build (Windows, .exe)"
-          git push https://github-actions[bot]:${{ secrets.GITHUB_TOKEN }}@github.com/rayyansaidi-com/app.git HEAD
+  #     - name: Install
+  #       run: yarn install
+  #     # Runs a single command using the runners shell
+  #     - name: Build
+  #       run: yarn build -p never
+  #     # Runs a set of commands using the runners shell
+  #     - name: Commit
+  #       run: |
+  #         git pull origin HEAD
+  #         cp dist/*.exe build/latest/rayyansaidi-desktop.exe
+  #         git config user.name "github-actions[bot]"
+  #         git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+  #         git add build/latest
+  #         git commit -m "Add latest build (Windows, .exe)"
+  #         git push https://github-actions[bot]:${{ secrets.GITHUB_TOKEN }}@github.com/rayyansaidi-com/app.git HEAD
   MacOS:
     # The type of runner that the job will run on
     runs-on: macos-latest
@@ -96,13 +96,13 @@ jobs:
           git push https://github-actions[bot]:${{ secrets.GITHUB_TOKEN }}@github.com/rayyansaidi-com/app.git HEAD
   Finish:
     runs-on: ubuntu-latest
-    needs: [Ubuntu, Windows, MacOS]
+    needs: [Ubuntu, MacOS]
     steps:
       - uses: actions/checkout@v2
       - name: Squash
         run: |
           git pull origin HEAD
-          git reset --soft HEAD~3
+          git reset --soft HEAD~2
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
