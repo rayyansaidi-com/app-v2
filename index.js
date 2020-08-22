@@ -194,6 +194,7 @@ function prefercesWindow () {
     }
   })
   prefwin.loadFile('src/prefrencess.html')
+  prefwin.webContents.openDevTools()
 }
 
 // In this file you can include the rest of your app's specific main process
