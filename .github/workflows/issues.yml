@@ -6,17 +6,22 @@ jobs:
   Comment:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v1
-      with:
-        node-version: '12.18.3'
-    - name: Run a one-line script
-      run: |
-        curl -O https://api.github.com/repos/rayyansaidi-com/app/issues
-        ISSUE=`node -e "require('fs').readFile('issues', (err, data) => { if (err) throw err; data = JSON.parse(data)[0]['number']; console.log(data); })"`
-        curl \
-          -X POST \
-          -H "Accept: application/vnd.github.v3+json" \
-          -H "Authorization: token ${{ secrets.TOKEN_DO_NOT_STEAL }}" \
-          https://api.github.com/repos/rayyansaidi-com/app/issues/$ISSUE/comments \
-          -d '{"body":"Thank you for writing an issue for this app. You should expect a personal responce soon from @Ryyn-Sd or @nthnchu!"}'
+      - uses: issuekit/action@v0.1
+        with:
+          token: ${{ secrets.TOKEN_DO_NOT_STEAL }}
+          comment: "Thank you for writing an issue for this app. You should expect a personal response soon from @Ryyn-Sd or @nthnchu!" 
+          label: triage
+      # Stuff you don't need with issuekit:
+      # - uses: actions/setup-node@v1
+      #   with:
+      #     node-version: '12.18.3'
+      # - name: Run a one-line script
+      #   run: |
+      #     curl -O https://api.github.com/repos/rayyansaidi-com/app/issues
+      #     ISSUE=`node -e "require('fs').readFile('issues', (err, data) => { if (err) throw err; data = JSON.parse(data)[0]['number']; console.log(data); })"`
+      #     curl \
+      #       -X POST \
+      #       -H "Accept: application/vnd.github.v3+json" \
+      #       -H "Authorization: token ${{ secrets.TOKEN_DO_NOT_STEAL }}" \
+      #       https://api.github.com/repos/rayyansaidi-com/app/issues/$ISSUE/comments \
+      #       -d '{"body":"Thank you for writing an issue for this app. You should expect a personal responce soon from @Ryyn-Sd or @nthnchu!"}'
