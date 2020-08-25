@@ -13,7 +13,7 @@
   "author": "Rayyan Saidi and Nathan Chu",
   "license": "GPL-3.0-or-later",
   "devDependencies": {
-    "electron": "^9.2.1",
+    "electron": "^10.0.0",
     "electron-builder": "^22.8.0",
     "eslint": "^7.7.0",
     "eslint-config-standard": "^14.1.1",
